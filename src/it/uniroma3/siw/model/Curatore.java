@@ -1,7 +1,7 @@
 package it.uniroma3.siw.model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -38,7 +38,7 @@ public class Curatore {
 	
 	@Getter
 	@Setter
-	private Date dataDiNascita;
+	private LocalDate dataDiNascita;
 	
 	@Getter
 	@Setter
