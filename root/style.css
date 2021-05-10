@@ -1,0 +1,110 @@
+/*Base Style*/
+body {
+    font-family: 'Inter', sans-serif;
+    background-color:floralwhite;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, p {
+    color:black;
+    padding-bottom:30px;
+}
+
+.big-text {
+    font-size:70px;
+}
+
+.med-text {
+    font-size: 40px;
+}
+
+.normal-text {
+    font-size: 20px;
+}
+
+/*Header*/
+.header {
+    border:1px solid red;
+    width:100%;
+    position:fixed;
+    top:0;
+    left: 0;
+    padding:30px;
+
+    /*flex:definire il posizionamento degli elementi all'interno di un contenitore*/
+    display: flex;
+}
+
+.logo {
+    border:1px solid red;
+}
+
+.menu, .menu ul, .menu a {
+    border: 1px solid red;
+    width:100%;
+}
+
+.menu {
+    background-color:darkred;
+    height:40px;
+    width:600px;
+}
+
+.menu li {
+    /*leva i puntini*/
+    list-style-type:none;
+    height:40px;
+    /*elemento posizionato rispetto al suo contenitore*/
+    position:relative;
+}
+
+.menu li a {
+    display:block;
+    text-decoration:none;
+    font-weight:bold;
+    color:black;
+    padding:0px 15px;
+    margin:5px 0px;
+    line-height:30px;
+}
+
+/*colore diverso al passaggio del mouse*/
+.menu li:hover > a {
+    color:floralwhite;
+}
+
+.menu li:hover >ul {
+    opacity:1;
+}
+
+/*nascondere voci menu a tendina*/
+.menu ul {
+    position:absolute;
+    opacity:0;
+    background-color:darkred;
+}
+
+.menu ul li {
+    height:0px;
+    overflow:hidden;
+    padding:0px;
+}
+
+/*compare il menu a tendina al passaggio del mouse*/
+.menu li:hover > ul li {
+    height:auto;
+    overflow:visible;
+}
+
+.menu ul li a {
+    width:600px;
+    padding:5px 10px;
+    border:none;
+}
+
+.cta {
+    border: 1px solid red;
+}
