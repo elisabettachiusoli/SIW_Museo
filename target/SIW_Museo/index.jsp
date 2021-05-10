@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Museo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stili/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     
     <!--reset css-->

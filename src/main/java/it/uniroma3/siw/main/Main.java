@@ -1,5 +1,5 @@
 package it.uniroma3.siw.main;
 
-public class ProductMain {
+public class Main {
 
 }
