@@ -27,30 +27,23 @@ h1, h2, h3, h4, h5, p {
 
 /*Header*/
 .header {
-    border:1px solid red;
-    width:100%;
-    position:fixed;
-    top:0;
+    width: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
-    padding:30px;
-
+    padding: 30px;
     /*flex:definire il posizionamento degli elementi all'interno di un contenitore*/
-    display: flex;
-}
-
-.logo {
-    border:1px solid red;
+    display:flex;
 }
 
 .menu, .menu ul, .menu a {
-    border: 1px solid red;
     width:100%;
 }
 
 .menu {
     background-color:darkred;
-    height:40px;
-    width:600px;
+    height:60px;
+    width:100%;
 }
 
 .menu li {
@@ -59,6 +52,7 @@ h1, h2, h3, h4, h5, p {
     height:40px;
     /*elemento posizionato rispetto al suo contenitore*/
     position:relative;
+
 }
 
 .menu li a {
@@ -66,9 +60,15 @@ h1, h2, h3, h4, h5, p {
     text-decoration:none;
     font-weight:bold;
     color:black;
-    padding:0px 15px;
+    padding:12px 45%;
     margin:5px 0px;
     line-height:30px;
+}
+
+.menu ul {
+    display: inline-flex;
+    justify-content: flex-start;
+
 }
 
 /*colore diverso al passaggio del mouse*/
@@ -91,6 +91,7 @@ h1, h2, h3, h4, h5, p {
     height:0px;
     overflow:hidden;
     padding:0px;
+
 }
 
 /*compare il menu a tendina al passaggio del mouse*/
@@ -101,10 +102,24 @@ h1, h2, h3, h4, h5, p {
 
 .menu ul li a {
     width:600px;
-    padding:5px 10px;
+    padding:0px;
     border:none;
+
 }
 
-.cta {
-    border: 1px solid red;
+/*Hero*/
+.hero {
+    background-color: darkred;
+    height: 600px;
+    display: flex;
+    width: 100%;
+    align-items: center;
 }
+
+.hero__content {
+    width:100%;
+    max-width:1350px;
+    margin:0 auto;
+}
+
+
