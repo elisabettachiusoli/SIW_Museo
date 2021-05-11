@@ -1,0 +1,75 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin:0;
+}
+
+h1, h2, h3, h4, p {
+    color: black;
+    padding-bottom: 30px;
+}
+
+.big-text {
+    font-size: 70px;
+}
+
+.med-text {
+    font-size: 40px;
+}
+
+.normal-text {
+    font-size: 20px;
+}
+
+#titolo {
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+    border-color: black;
+    padding: 100px;
+    color: floralwhite;
+    text-align: center;
+    text-transform: full-width;
+    overflow: hidden;
+    position: relative;
+    background-color: darkred;
+    font-size: 40px;
+}
+
+#descrizione {
+    width: 50%;
+    margin-left: 15px;
+    text-align: justify;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 17px;
+    color: #808080;
+}
+
+.testo {
+    font-size: 15px;
+    color: #000;
+}
+
+#lista {
+    width: 100%;
+    background-color: #000;
+    border-bottom: solid 2px #000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+    display:flex;
+    flex-direction:column;
+}
+
+.img1, .img2, .img3, .img4 {
+    display: flex;
+    flex-direction: column;
+    margin-left:20px;
+}
+
+.descr {
+    padding-left: 12px;
+    padding-right: 14px;
+    color: darkred;
+    font-size: 15px;
+}

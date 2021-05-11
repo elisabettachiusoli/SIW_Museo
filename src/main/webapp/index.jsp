@@ -24,7 +24,7 @@
                 <a href="">Menu</a>
                 <ul>
                     <li><a href="artista.jsp">Autori</a></li>
-                    <li><a href="">Collezioni</a></li>
+                    <li><a href="collezione.jsp">Collezioni</a></li>
                     <li><a href="">Informazioni</a></li>
                 </ul>
             </li>
