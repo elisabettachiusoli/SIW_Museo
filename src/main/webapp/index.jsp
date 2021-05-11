@@ -38,7 +38,7 @@
             <h1 class="big-text">Nome del Museo</h1>
         </div>
         <div class="hero__content2">
-            <img src="foto.jpg" width="300" height="250" align="left" hspace="20">
+            
         </div>
     </div>
 

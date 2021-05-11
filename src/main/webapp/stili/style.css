@@ -31,9 +31,10 @@ h1, h2, h3, h4, h5, p {
     position: fixed;
     top: 0;
     left: 0;
+    max-width: 1350px;
     padding: 30px;
     /*flex:definire il posizionamento degli elementi all'interno di un contenitore*/
-    display:flex;
+    display: flex;
 }
 
 .menu, .menu ul, .menu a {
@@ -59,6 +60,7 @@ h1, h2, h3, h4, h5, p {
     display:block;
     text-decoration:none;
     font-weight:bold;
+    font-size:25px;
     color:black;
     padding:12px 45%;
     margin:5px 0px;
@@ -68,22 +70,24 @@ h1, h2, h3, h4, h5, p {
 .menu ul {
     display: inline-flex;
     justify-content: flex-start;
-
 }
 
 /*colore diverso al passaggio del mouse*/
 .menu li:hover > a {
     color:floralwhite;
+    transition:0.5s;
 }
 
 .menu li:hover >ul {
     opacity:1;
+    display:block;
+    display: inline-flex;
 }
 
 /*nascondere voci menu a tendina*/
 .menu ul {
     position:absolute;
-    opacity:0;
+    display:none;
     background-color:darkred;
 }
 
@@ -104,7 +108,7 @@ h1, h2, h3, h4, h5, p {
     width:600px;
     padding:0px;
     border:none;
-
+    display:block;
 }
 
 /*Hero*/
@@ -119,7 +123,12 @@ h1, h2, h3, h4, h5, p {
 .hero__content {
     width:100%;
     max-width:1350px;
-    margin:0 auto;
+    margin:100px;
 }
 
-
+.hero__content2 {
+    background-color: floralwhite;
+    height: 320px;
+    width: 3000px;
+    margin:100px;
+}
