@@ -23,7 +23,7 @@
             <li>
                 <a href="">Menu</a>
                 <ul>
-                    <li><a href="artista.jsp">Autori</a></li>
+                    <li><a href="">Autori</a></li>
                     <li><a href="">Collezioni</a></li>
                     <li><a href="">Informazioni</a></li>
                 </ul>
@@ -37,60 +37,25 @@
             <p class="normal-text">Benvenuti al</p>
             <h1 class="big-text">Nome del Museo</h1>
         </div>
-        <!--image slider start-->
         <div class="slider">
-            <div class="slides">
-                <!--radio buttons start-->
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-                <!--radio buttons end-->
-                <!--slide images start-->
-                <div class="slide first">
-                    <img src="opera1.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="opera2.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="opera3.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="opera4.jpg" alt="">
-                </div>
-                <!--slide images end-->
-                <!--automatic navigation start-->
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                    <div class="auto-btn4"></div>
-                </div>
-                <!--automatic navigation end-->
-            </div>
-            <!--manual navigation start-->
-            <div class="navigation-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-            </div>
-            <!--manual navigation end-->
-        </div>
-        <!--image slider end-->
+            <div class="images">
+                <input type="radio" name="slide" id="img1" checked>
+                <input type="radio" name="slide" id="img2">
+                <input type="radio" name="slide" id="img3">
+                <input type="radio" name="slide" id="img4">
 
-        <!--Javascript-->
-        <script type="text/javascript">
-            var counter=1;
-            setInterval(function(){
-                document.getElementById('radio' + counter).checked=true;
-                counter++;
-                if(counter>4) {
-                    counter=1;
-                }
-            }, 500);
-        </script>
+                <img src="opera1.jpg" class="m1" alt="img1">
+                <img src="opera2.jpg" class="m2" alt="img2">
+                <img src="opera3.jpg" class="m3" alt="img3">
+                <img src="opera4.jpg" class="m4" alt="img4">
+            </div>
+            <div class="dots">
+                <label for="img1"></label>
+                <label for="img2"></label>
+                <label for="img3"></label>
+                <label for="img4"></label>
+            </div>
+        </div>
     </div>
 </body>
 </html>
