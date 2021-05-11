@@ -1,0 +1,25 @@
+﻿body {
+    /* Stili per i titoli: Gill Sans per h1, Gill Sans MT per h2, Trebuchet MS per h3. sans-serif per h4  */
+    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', Calibri;
+    margin: 0;
+    background-color: #880202;
+
+}
+
+#paragrafo {
+    text-align: justify;
+    font-size: 34px;
+
+}
+.titolo {
+    text-align: center;
+    font-size: 48px;
+    text-transform: full-width;
+ 
+}
+.descr {
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 20px;
+    color: #808080;
+}

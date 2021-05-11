@@ -1,0 +1,58 @@
+﻿body {
+    /* Stili per i titoli: Gill Sans per h1, Gill Sans MT per h2, Trebuchet MS per h3. sans-serif per h4  */
+    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', Calibri;
+    margin: 0;
+}
+#titolo {
+    border-top: solid 2px #000;
+    border-bottom: solid 2px #000;
+    padding: 100px;
+    color: #000;
+    text-align: left;
+    text-transform: full-width;
+    overflow: hidden;
+    position: relative;
+    background-image: url(vangogh.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: up;
+}
+
+
+#biografia {
+    
+    width: 50%;
+    margin-left: 15px;
+    text-align: justify;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 7px;
+    color: #808080;
+}
+.bio {
+    
+    font-size: 14px;
+    color: #000;
+}
+#opera {
+    width: 100%;
+    background-color: #000;
+    border-bottom: solid 2px #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+.primo {
+    border-bottom: 1px solid #880202;
+    margin-left: 200px;
+    padding-right: 100px;
+    margin-right: 200px;
+}
+.descr {
+    padding-left: 130px;
+    padding-right: 145px;
+    color: #880202;
+}
+
+
