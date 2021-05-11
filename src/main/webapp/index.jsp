@@ -48,7 +48,7 @@
                 <!--radio buttons end-->
                 <!--slide images start-->
                 <div class="slide first">
-                    <img src="opera1.jpg" alt="" width="500" height="400">
+                    <img src="opera1.jpg" alt="">
                 </div>
                 <div class="slide">
                     <img src="opera2.jpg" alt="">
@@ -78,6 +78,19 @@
             </div>
             <!--manual navigation end-->
         </div>
+        <!--image slider end-->
+
+        <!--Javascript-->
+        <script type="text/javascript">
+            var counter=1;
+            setInterval(function(){
+                document.getElementById('radio' + counter).checked=true;
+                counter++;
+                if(counter>4) {
+                    counter=1;
+                }
+            }, 500);
+        </script>
     </div>
 </body>
 </html>
