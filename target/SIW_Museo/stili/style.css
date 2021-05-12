@@ -132,62 +132,55 @@ h1, h2, h3, h4, h5, p {
     margin:100px;
 }
 
-/*Slider*/
-.slider {
-    position:relative;
-    width:60%;
-    overflow:hidden;
+#slider {
+    overflow: hidden;
+    max-height: 400px;
+    width: 100%;
+    margin-top: 100px;
+    margin-right: 50px;
+}
+/*animation che impiega 20 secondi totali ad arrivare alla fine delle foto*/
+    #slider figure {
+        position: relative;
+        width: 500%;
+        margin-top: 10px;
+        z-index:0;
+        animation: 20s slider infinite;
+    }
+#slider figure img {
+    width:20%;
+    float:left;
+}
+/*fa partire animazione*/
+@keyframes slider {
+    0% {
+        left:0;
+    }
+  20%{
+        left: 0;
+    }
+   25%{
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+
+    70%{
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
 }
 
-.images {
-    display:flex;
-    width:100%;
 
-}
-
-.images img {
-    height:400px;
-    width:100%;
-    transition:all 0.15s ease;
-
-}
-
-.images input {
-    display: none;
-}
-
-.dots {
-    display:flex;
-    justify-content:center;
-    margin:5px;
-}
-
-.dots label {
-    height: 10px;
-    width: 10px;
-    border-radius:50%;
-    border:solid 3px;
-    border-color:black;
-    transition:all 0.15s ease;
-    margin:5px;
-}
-
-.dots label:hover {
-    background-color:black;
-}
-
-#img1:checked ~ .m1 {
-    margin-left:0;
-}
-
-#img2:checked ~ .m2 {
-    margin-left: -100%;
-}
-
-#img3:checked ~ .m3 {
-    margin-left: -200%;
-}
-
-#img4:checked ~ .m4 {
-    margin-left: -300%;
-}

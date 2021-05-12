@@ -25,7 +25,7 @@
                 <ul>
                     <li><a href="artista.jsp">Autori</a></li>
                     <li><a href="collezione.jsp">Collezioni</a></li>
-                    <li><a href="">Informazioni</a></li>
+                    <li><a href="#">Informazioni</a></li>
                 </ul>
             </li>
         </ul>
@@ -37,25 +37,17 @@
             <p class="normal-text">Benvenuti al</p>
             <h1 class="big-text">Nome del Museo</h1>
         </div>
-        <div class="slider">
-            <div class="images">
-                <input type="radio" name="slide" id="img1" checked>
-                <input type="radio" name="slide" id="img2">
-                <input type="radio" name="slide" id="img3">
-                <input type="radio" name="slide" id="img4">
-
-                <img src="opera1.jpg" class="m1" alt="img1">
-                <img src="opera2.jpg" class="m2" alt="img2">
-                <img src="opera3.jpg" class="m3" alt="img3">
-                <img src="opera4.jpg" class="m4" alt="img4">
-            </div>
-            <div class="dots">
-                <label for="img1"></label>
-                <label for="img2"></label>
-                <label for="img3"></label>
-                <label for="img4"></label>
-            </div>
-        </div>
+        <div id="slider">
+        
+            <figure>
+                <img src="opera1.jpg" class="m1">
+                <img src="opera2.jpg" class="m2">
+                <img src="opera3.jpg" class="m3">
+                <img src="opera4.jpg" class="m4">
+                <img src="opera1.jpg" class="m1">
+            </figure>
+              </div>      
+            
     </div>
 </body>
 </html>
