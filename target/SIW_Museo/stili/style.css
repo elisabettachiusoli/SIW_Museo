@@ -1,21 +1,15 @@
 /*Base Style*/
 body {
-    font-family: 'Inter', sans-serif;
-    background-color:floralwhite;
-    margin:0;
-    padding:0;   
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    font-family: 'Noto Sans HK', sans-serif;
+    background-color: floralwhite;
+    margin: 0;
+    padding: 0;
 }
 
-a {
-    text-decoration: none;
-}
 
 h1, h2, h3, h4, h5, p {
     color:black;
-    padding-bottom:30px;
+    padding-bottom:5px;
 }
 
 .big-text {
@@ -30,92 +24,115 @@ h1, h2, h3, h4, h5, p {
     font-size: 20px;
 }
 
-/*Header*/
-.header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    max-width: 1350px;
-    padding: 30px;
-    /*flex:definire il posizionamento degli elementi all'interno di un contenitore*/
-    display: flex;
+/*Barra di navigazione*/
+
+.checkbox {
+    display:none;
 }
 
-.menu, .menu ul, .menu a {
+header {
+    position:fixed;
     width:100%;
+    z-index:10;
+}
+
+header-container {
+    width:90%;
+    position:relative;
+    margin:1rem auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header-logo {
+    margin-top:20px;
+    margin-left:20px;
+}
+
+.btn-label {
+    width:2rem;
+    height:1.4rem;
+}
+
+header-button {
+    width: 2rem;
+    height: 0.2rem;
+    background-color: black;
+    position: center;
+    top: 1.9rem;
+    transition: all 0.2s;
+    
+}
+
+.header-button::before, .header-button::after {
+    content: "";
+    width: 2rem;
+    height: 0.2rem;
+    background-color: black;
+    position: absolute;
+    align-content: center;
+    transition: all 0.2s;
+    margin-top: 40px;
+}
+
+.header-button::after {
+    top:0.6rem;
 }
 
 .menu {
     background-color:darkred;
-    height:60px;
     width:100%;
-}
-
-.menu li {
-    /*leva i puntini*/
-    list-style-type:none;
-    height:40px;
-    /*elemento posizionato rispetto al suo contenitore*/
-    position:relative;
-
-}
-
-.menu li a {
-    display:block;
-    text-decoration:none;
-    font-weight:bold;
+    height:10rem;
+    position:fixed;
+    z-index:9;
+    top:-12rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    text-align:center;
+    padding-top:2rem;
+    transition:all 0.5s;
     font-size:25px;
-    color:black;
-    padding:12px 50%;
-    margin:5px 0px;
-    line-height:30px;
 }
 
-.menu ul {
+ul {
+    list-style: none;
     display: inline-flex;
-    justify-content: flex-start;
+    justify-content: center;
+    justify-content: space-around;
 }
 
-/*colore diverso al passaggio del mouse*/
-.menu li:hover > a {
-    color:floralwhite;
-    transition:0.5s;
+li {
+    margin:0.5rem;
 }
 
-.menu li:hover >ul {
-    opacity:1;
-    display:block;
-    display:inline-flex;
+a {
+    margin:0.1rem;
+    color:white;
+    text-decoration:none;
 }
 
-/*nascondere voci menu a tendina*/
-.menu ul {
-    position:absolute;
-    display:none;
+.checkbox:checked ~ .menu {
     background-color:darkred;
-    height:auto;
+    top:0rem;
 }
 
-.menu ul li {
-    height:0px;
-    overflow:hidden;
-    padding:0px;
-
+.checkbox:checked + header .header-container label .header-button {
+    background:none;
 }
 
-/*compare il menu a tendina al passaggio del mouse*/
-.menu li:hover > ul li {
-    height:auto;
-    overflow:visible;
+.checkbox:checked + header .header-container label .header-button::before {
+    transform:rotate(35deg);
+    top:0;
 }
 
-.menu ul li a {
-    width:600px;
-    padding:0px;
-    border:none;
-    display:block;
+.checkbox:checked + header .header-container label .header-button::after {
+    transform:rotate(-35deg);
+    top:0;
 }
+
+
 
 /*Hero*/
 .hero {
@@ -182,5 +199,3 @@ h1, h2, h3, h4, h5, p {
         left: -400%;
     }
 }
-
-
