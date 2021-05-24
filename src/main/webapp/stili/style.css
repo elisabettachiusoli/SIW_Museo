@@ -145,7 +145,7 @@ a {
     display: flex;
     width: 100%;
     align-items: center;
-    z-index:6;
+    z-index:5;
 }
 
 .hero__content {
@@ -154,22 +154,65 @@ a {
     margin:100px;
 }
 
+#i1,#i2,#i3,#i4 {
+	display:none;
+}
+
+.dots{
+	justify-content:center;
+	z-index:8;
+	display:flex;
+	position:absolute;
+}
+.dots label{
+	top: 430px;
+			width: 18px;
+			height: 18px;		
+			border-radius: 50%;
+			background-color: rgba(0, 0, 0, 0.6);
+			transition: all 0.15s ease;
+			cursor: pointer;
+			margin: 5px;
+
+}
+
+.dots label:hover {background-color: #FFF;}
+#img1:checked ~ .m1 {
+	margin-left: 0;
+}
+#img2:checked ~ .m2 {
+	margin-left: -100%;
+}
+#img3:checked ~ .m3 {
+	margin-left: -200%;
+}
+#img4:checked ~ .m4 {
+	margin-left: -300%;
+}
+
 #slider {
     overflow: hidden;
     max-height: 400px;
     width: 100%;
     margin-top: 100px;
     margin-right: 50px;
+    z-index:7;
+    position: relative;
+}
+#slider input {
+	display:none;
 }
 /*animation che impiega 20 secondi totali ad arrivare alla fine delle foto*/
     #slider figure {
         position: relative;
+        
         width: 500%;
         margin-top: 10px;
-        z-index:0;
         animation: 20s slider infinite;
+        z-index:8;
     }
 #slider figure img {
+	
     width:20%;
     float:left;
 }

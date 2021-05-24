@@ -43,15 +43,30 @@
             <h2 class="med-text">Benvenuti al</h2>
             <h1 class="big-text">Museo dell'arte impressionista</h1>
         </div>
+       
+ 
         <div id="slider"> 
             <figure>
-                <img src="opera1.jpg"  class="m1">
-                <img src="opera2.jpg" class="m2">
-                <img src="opera3.jpg" class="m3">
-                <img src="opera4.jpg" class="m4">
-                <img src="opera1.jpg" class="m1">
+            <input type="radio" name="slider" id="img1" checked>
+            <input type="radio" name="slider" id="img2">
+            <input type="radio" name="slider" id="img3">
+            <input type="radio" name="slider" id="img4">
+            <input type="radio" name="slider" id="img1">
+                <img src="opera1.jpg"  class="m1" alt="img1">
+                <img src="opera2.jpg" class="m2" alt="img2">
+                <img src="opera3.jpg" class="m3"alt="img3">      
+                <img src="opera4.jpg" class="m4" alt="img4">           
+                <img src="opera1.jpg" class="m1" alt="img1">
             </figure>
-        </div>             
+   
+        <div class="dots">
+        <label for="img1"></label>
+        <label  for="img2"></label>
+        <label  for="1mg3"></label>
+        <label for="img4"></label>
+        
+        </div>          
+    </div>
     </div>
     <section id="aboutUs">
     <div>
