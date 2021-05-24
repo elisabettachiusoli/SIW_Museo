@@ -14,7 +14,7 @@
         <div class="titolo">
             <img src="logo.png" width="80px" height="70px" align="left" hspace="20px" /> <h2> Museo dell'arte impressionista </h2>
         </div>
-        
+         
         <ul>
             <li>
                 <!-- collegamento ipertestuale alla home -->
@@ -36,6 +36,7 @@
       
         
     </nav>
+    <section>
     <img src="stili/notteStellata.jpg" width="500px" height="700px" hspace="15px" align="left" />
     <section id="paragrafo">
         <p>
@@ -43,9 +44,9 @@
             <div class="descr">
                 <a href="artista.jsp" class="descr"> Nome Artista </a>, Data
             </div>
-            Artista è balblablablablabalblablablablabalblablablab
+            Artista ï¿½ balblablablablabalblablablablabalblablablab
         </p>
     </section>
-    
+    </section>
 </body>
 </html>

@@ -17,22 +17,22 @@
             <img src="logo.png" width="80px" height="70px" align="left" hspace="20px" /> <h2> Museo dell'arte impressionista </h2>
         </div>
         
-        <ul>
-            <li>
+        <ul >
+            <li >
                 <!-- collegamento ipertestuale alla home -->
-                <a href="index.jsp"> Home </a>
+                <a  href="index.jsp"> Home </a>
             </li>
-            <li>
+            <li >
                 <!-- collegamento ipertestuale alla pagina itinerari -->
-                <a href="artisti.jsp"> Autori </a>
+                <a  href="artisti.jsp"> Autori </a>
             </li>
-            <li>
+            <li >
                 <!-- collegamento ipertestuale alla pagina itinerari -->
-                <a href="collezione.jsp"> Collezioni </a>
+                <a  href="collezione.jsp"> Collezioni </a>
             </li>
-            <li>
+            <li >
                 <!-- collegamento ipertestuale alla pagina informazioni -->
-                <a href="informazioni.jsp"> Informazioni</a>
+                <a  href="informazioni.jsp"> Informazioni</a>
             </li>
         </ul>
       
@@ -49,11 +49,11 @@
     Zundert, 30 marzo 1853 – Auvers-sur-Oise, 29 luglio 1890
         <div class="bio">
             <p>
-                Fu autore di quasi novecento dipinti e di più di mille disegni, senza contare i numerosi schizzi non portati a termine. 
-                Tanto geniale quanto incompreso se non addirittura disprezzato in vita, Van Gogh influenzò profondamente l'arte del XX secolo.
-                 Iniziò a disegnare da bambino nonostante le critiche del padre, pastore protestante che continuò ad impartirgli delle norme severe.
-                 Iniziò a dipingere tardi, all'età di ventisette anni,realizzando molte delle sue opere più note nel corso degli ultimi due anni di vita.
-                 Dopo aver trascorso diversi anni soffrendo di frequenti disturbi mentali, morì all'età di trentasette anni.
+                Fu autore di quasi novecento dipinti e di pi� di mille disegni, senza contare i numerosi schizzi non portati a termine. 
+                Tanto geniale quanto incompreso se non addirittura disprezzato in vita, Van Gogh influenzo' profondamente l'arte del XX secolo.
+                 Inizio' a disegnare da bambino nonostante le critiche del padre, pastore protestante che continuo' ad impartirgli delle norme severe.
+                 Inizio' a dipingere tardi, all'età di ventisette anni,realizzando molte delle sue opere piu' note nel corso degli ultimi due anni di vita.
+                 Dopo aver trascorso diversi anni soffrendo di frequenti disturbi mentali, mori' all'et� di trentasette anni.
 I suoi soggetti consistevano in autoritratti, paesaggi, nature morte di fiori, dipinti con cipressi, rappresentazione di campi di grano e girasoli. 
             </p>
         </div>

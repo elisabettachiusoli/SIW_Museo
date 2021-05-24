@@ -2,8 +2,44 @@ body {
     font-family: 'Inter', sans-serif;
     margin:0;
 }
-
-h1, h2, h3, h4, p {
+nav {
+    
+    top:0;
+    left:0;
+    width:100%;
+    height: 100px;
+    padding: 10px 90px;
+    box-sizing: border-box;
+    background-color:darkred ;
+    z-index:1;
+}
+/* Stile per la barra principale. Il colore è il celestino, con la scritta nera*/
+    nav .titolo {
+        padding: 10px;
+        font-size: 30px;
+        color: #FFF;
+    }
+    /* Stile per i link presenti nella barra principale. Il testo è allineato a destra*/
+    nav ul {
+        list-style:none;
+        float:right;
+        margin: -40px;
+        padding:30px;
+        display:flex;
+    }
+       nav ul li a {
+           padding: 10px 30px;
+            color: #FFF;
+            text-decoration:none;
+            text-transform:uppercase;
+        }
+    nav ul li a:hover {
+        background: rgba(0,0,0,0.5);
+        border-radius: 6px;
+    }
+    
+     
+h1,  h3, h4, p {
     color: black;
     padding-bottom: 30px;
 }
@@ -20,7 +56,7 @@ h1, h2, h3, h4, p {
     font-size: 20px;
 }
 
-#titolo {
+#title {
     border-top: solid 2px;
     border-bottom: solid 2px;
     border-color: black;

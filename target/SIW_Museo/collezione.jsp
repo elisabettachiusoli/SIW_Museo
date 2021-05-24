@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <!-- logo -->
+    <link rel=icon href="museo.png" >
     <title>Museo</title>
     <link rel="stylesheet" href="stili/collezione.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,7 +16,35 @@
 
 </head>
 <body>
-    <section id="titolo">
+<nav>
+        <!-- caricamento immagine logo a sinistra con uno spazio prima del nome della agenzia -->
+        <div class="titolo">
+            <img src="logo.png" width="80px" height="70px" align="left" hspace="30px" /> <h2> Museo dell'arte impressionista </h2>
+        </div>
+         
+        <ul >
+            <li >
+                <!-- collegamento ipertestuale alla home -->
+                <a  href="index.jsp"> Home </a>
+            </li>
+            <li >
+                <!-- collegamento ipertestuale alla pagina itinerari -->
+                <a  href="artisti.jsp"> Autori </a>
+            </li>
+            <li >
+                <!-- collegamento ipertestuale alla pagina itinerari -->
+                <a  href="collezione.jsp"> Collezioni </a>
+            </li>
+            <li >
+                <!-- collegamento ipertestuale alla pagina informazioni -->
+                <a  href="informazioni.jsp"> Informazioni</a>
+            </li>
+        </ul>
+      
+        
+    </nav>
+    <section>
+    <section id="title">
         <h1 class="big-text">Collezione</h1>
     </section>
     <section id="descrizione">
@@ -49,6 +79,7 @@
             <a href="opera.jsp" class="descr">Nome Opera</a>
             <a href="artista.jsp" class="descr">Nome Artista</a>
         </div>
+    </section>
     </section>
 </body>
 </html>

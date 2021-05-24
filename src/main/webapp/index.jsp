@@ -33,7 +33,7 @@
         <ul>
             <li><a href="artista.jsp">Autori</a></li>
             <li><a href="collezione.jsp">Collezioni</a></li>
-            <li><a href="#">Informazioni</a></li>
+            <li><a href="informazioni.jsp">Informazioni</a></li>
         </ul>
     </nav>
 
@@ -45,7 +45,7 @@
         </div>
         <div id="slider"> 
             <figure>
-                <img src="opera1.jpg" class="m1">
+                <img src="opera1.jpg"  class="m1">
                 <img src="opera2.jpg" class="m2">
                 <img src="opera3.jpg" class="m3">
                 <img src="opera4.jpg" class="m4">
@@ -53,6 +53,21 @@
             </figure>
         </div>             
     </div>
+    <section id="aboutUs">
+    <div>
+    <h2> About Us</h2>
+    Il Museo dell'arte impressionista nasce circa trent'anni fa, quando la passione e l'amore per l'arte condussero
+    Matteo Rossi, tuttora fondatore e direttore del museo, ad aprire una piccola mostra di quadri in una delle sue residenze. </br>
+    Da allora, il Museo dell'arte impressionista ha continuato ad espandersi, grazie anche all'aiuto di molti benefattori, portando alla raccolta di opere che possiamo ammirare noi oggigiorno
+    </div>
+    <div> 
+   <div>
+   <h3> Servizi: </h3> </br>
+   <img src="stili/services.jpg" class="services" height="150" widht="1200">
+   </div> 
+    
+    </div>
+    </section>
 
 </body>
 </html>

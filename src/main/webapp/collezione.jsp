@@ -19,27 +19,31 @@
 <nav>
         <!-- caricamento immagine logo a sinistra con uno spazio prima del nome della agenzia -->
         <div class="titolo">
-            <img src="logo.png" width="80px" height="70px" align="left" hspace="20px" /> <h2> Museo dell'arte impressionista </h2>
+            <img src="logo.png" width="80px" height="70px" align="left" hspace="30px" /> <h2> Museo dell'arte impressionista </h2>
         </div>
-        
-        <ul>
-            <li>
+         
+        <ul >
+            <li >
                 <!-- collegamento ipertestuale alla home -->
-                <a href="index.jsp"> Home </a>
+                <a  href="index.jsp"> Home </a>
             </li>
-            <li>
+            <li >
                 <!-- collegamento ipertestuale alla pagina itinerari -->
-                <a href="artisti.jsp"> Artisti </a>
+                <a  href="artisti.jsp"> Autori </a>
             </li>
-            <li>
+            <li >
+                <!-- collegamento ipertestuale alla pagina itinerari -->
+                <a  href="collezione.jsp"> Collezioni </a>
+            </li>
+            <li >
                 <!-- collegamento ipertestuale alla pagina informazioni -->
-                <a href="informazioni.jsp"> Informazioni</a>
+                <a  href="informazioni.jsp"> Informazioni</a>
             </li>
         </ul>
       
         
     </nav>
-    
+    <section>
     <section id="title">
         <h1 class="big-text">Collezione</h1>
     </section>
@@ -75,6 +79,7 @@
             <a href="opera.jsp" class="descr">Nome Opera</a>
             <a href="artista.jsp" class="descr">Nome Artista</a>
         </div>
+    </section>
     </section>
 </body>
 </html>

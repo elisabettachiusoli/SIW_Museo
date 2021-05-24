@@ -1,0 +1,59 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin:0;
+}
+nav {
+    
+    top:0;
+    left:0;
+    width:100%;
+    height: 100px;
+    padding: 10px 90px;
+    box-sizing: border-box;
+    background-color:darkred ;
+    z-index:1;
+}
+/* Stile per la barra principale. Il colore è il celestino, con la scritta nera*/
+    nav .titolo {
+      padding:0px;
+        font-size: 20px;
+        color: #FFF;
+    }
+    /* Stile per i link presenti nella barra principale. Il testo è allineato a destra*/
+    nav ul {
+        list-style:none;
+        float:right;
+        margin: -40px;
+        padding:20px;
+        display:flex;
+    }
+       nav ul li a {
+           padding: 10px 30px;
+            color: #FFF;
+            text-decoration:none;
+            text-transform:uppercase;
+        }
+    nav ul li a:hover {
+        background: rgba(0,0,0,0.5);
+        border-radius: 6px;
+    }
+    
+     
+
+
+.parallax
+{
+	background: url(foto.jpg)
+	repeat fixed 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+.parallax-inner {
+    padding-top: 25%;
+    padding-left: 80px;
+    text-align: left;
+    font-size: 80px;
+    color: #000;
+
+}

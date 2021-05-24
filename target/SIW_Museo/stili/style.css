@@ -199,3 +199,15 @@ a {
         left: -400%;
     }
 }
+#aboutUs {
+	width: 90%;
+    margin-left: 15px;
+    text-position:center;
+    text-align: justify;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: #000;
+} 
+.services {
+	border-box: solid 2px #000;
+}
