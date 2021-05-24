@@ -39,7 +39,8 @@
       
         
     </nav>
-    <section id="titolo">
+    
+    <section id="title">
         <h1 class="big-text">Collezione</h1>
     </section>
     <section id="descrizione">
