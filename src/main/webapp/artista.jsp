@@ -14,7 +14,7 @@
 <nav>
         <!-- caricamento immagine logo a sinistra con uno spazio prima del nome della agenzia -->
         <div class="titolo">
-            <img src="logo.png" width="80px" height="70px" align="left" hspace="20px" /> <h2> Agenzia Viaggi da Sogno </h2>
+            <img src="logo.png" width="80px" height="70px" align="left" hspace="20px" /> <h2> Museo dell'arte impressionista </h2>
         </div>
         
         <ul>
@@ -24,7 +24,11 @@
             </li>
             <li>
                 <!-- collegamento ipertestuale alla pagina itinerari -->
-                <a href="artisti.jsp"> Artisti </a>
+                <a href="artisti.jsp"> Autori </a>
+            </li>
+            <li>
+                <!-- collegamento ipertestuale alla pagina itinerari -->
+                <a href="collezione.jsp"> Collezioni </a>
             </li>
             <li>
                 <!-- collegamento ipertestuale alla pagina informazioni -->

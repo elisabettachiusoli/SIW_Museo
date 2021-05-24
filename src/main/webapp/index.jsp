@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <!-- logo -->
+    <link rel=icon href="museo.png" >
     <title>Museo dell'arte impressionista</title>
     <link rel="stylesheet" href="stili/style.css">
 
