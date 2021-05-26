@@ -69,7 +69,7 @@ header-button {
 .header-button::before, .header-button::after {
     content: "";
     width: 2rem;
-    height: 0.2rem;
+    height: 0.3rem;
     background-color: black;
     position: absolute;
     align-content: center;
@@ -319,7 +319,15 @@ a {
     color:white;
 }
 
-.dati h3, p {
+.dati h3 {
+    width: 100%;
+    height: auto;
+    flex: 50%;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.dati p {
     width: 100%;
     height: auto;
     flex: 50%;

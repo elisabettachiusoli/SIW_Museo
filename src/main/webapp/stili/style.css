@@ -319,7 +319,15 @@ a {
     color:white;
 }
 
-.dati h3, p {
+.dati h3 {
+    width: 100%;
+    height: auto;
+    flex: 50%;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.dati p {
     width: 100%;
     height: auto;
     flex: 50%;
