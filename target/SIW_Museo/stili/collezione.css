@@ -1,47 +1,48 @@
 body {
-    font-family: 'Inter', sans-serif;
-    margin:0;
+    font-family: 'Noto Sans HK', sans-serif;
+    margin: 0;
 }
+
 nav {
-    
-    top:0;
-    left:0;
-    width:100%;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100px;
-    padding: 10px 90px;
+    padding: 0px 80px;
     box-sizing: border-box;
-    background-color:darkred ;
-    z-index:1;
+    background-color: darkred;
+    z-index: 1;
 }
 /* Stile per la barra principale. Il colore è il celestino, con la scritta nera*/
-    nav .titolo {
-        padding: 10px;
-        font-size: 30px;
-        color: #FFF;
-    }
-    /* Stile per i link presenti nella barra principale. Il testo è allineato a destra*/
-    nav ul {
-        list-style:none;
-        float:right;
-        margin: -40px;
-        padding:30px;
-        display:flex;
-    }
-       nav ul li a {
-           padding: 10px 30px;
-            color: #FFF;
-            text-decoration:none;
-            text-transform:uppercase;
-        }
-    nav ul li a:hover {
-        background: rgba(0,0,0,0.5);
-        border-radius: 6px;
-    }
-    
-     
-h1,  h3, h4, p {
-    color: black;
-    padding-bottom: 30px;
+nav .titolo {
+    padding: 10px;
+    font-size: 20px;
+    color: #FFF;
+}
+/* Stile per i link presenti nella barra principale. Il testo è allineato a destra*/
+nav ul {
+    list-style: none;
+    float: right;
+    margin: -90px;
+    padding: 20px;
+    display: flex;
+}
+
+nav ul li a {
+    padding: 10px 30px;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    background: rgba(0,0,0,0.5);
+    border-radius: 6px;
+}
+
+/*Font*/
+h1, h3, h4, p {
+    color: black;   
 }
 
 .big-text {
@@ -60,72 +61,82 @@ h1,  h3, h4, p {
     border-top: solid 2px;
     border-bottom: solid 2px;
     border-color: black;
-    padding: 100px;
-    color: floralwhite;
     text-align: center;
     text-transform: full-width;
     overflow: hidden;
     position: relative;
     background-color: darkred;
-    font-size: 40px;
+    width:100%;
 }
 
 #descrizione {
-    width: 50%;
+    width: 100%;
+    height:auto;
     margin-left: 15px;
-    text-align: justify;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    margin-top:5px;
+    margin-bottom:5px;
     font-size: 17px;
-    color: #808080;
+    color: black;
 }
 
 .testo {
     font-size: 15px;
-    color: #000;
+    color: black;
 }
 
-#lista {
+.opera1, .opera2, .opera3, .opera4 {
     width: 100%;
-    background-color: #000;
-    border-bottom: solid 2px #000;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: black;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    flex: 50%;
+}
+
+.descrizione {
+    width: 100%;
+    height: auto;
+    flex: 50%;
     text-align: center;
-    color: #ffffff;
+    
+}
+
+.descrizione a {
+    color:darkred;
     display:flex;
     flex-direction:column;
+    font-size:19px;
 }
 
-.img1, .img2, .img3, .img4 {
-    display: flex;
-    flex-direction: column;
-    margin-left:20px;
-}
-
-.descr {
-    padding-left: 12px;
-    padding-right: 14px;
-    color: darkred;
-    font-size: 15px;
+.descrizione p {
+    color:white;
+    font-family: 'Great Vibes', cursive;
+    font-size:30px;
 }
 
 /*Contatti e mappa*/
 .contact {
-    width:100%;
-    height:auto;
-    margin:auto;
-    display:flex;
-    flex-wrap:wrap;
-    padding:10px;
-    background-color:black;
-
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: black;
+    border-top: solid 2px;
+    border-color: white;
 }
 
 .contact-map {
-    width:100%;
-    height:auto;
-    flex:50%;
+    width: 100%;
+    height: auto;
+    flex: 50%;
 }
 
 .contact-map iframe {
@@ -137,13 +148,12 @@ h1,  h3, h4, p {
     width: 100%;
     height: auto;
     flex: 50%;
-    text-align:center;
-    
+    text-align: center;
 }
 
 .contact-info h1 {
-    margin-bottom:10px;
-    color:white;
+    margin-bottom: 10px;
+    color: white;
 }
 
 .dati h3 {
@@ -163,5 +173,5 @@ h1,  h3, h4, p {
 }
 
 .logo {
-    margin-right:10px;
+    margin-right: 10px;
 }
