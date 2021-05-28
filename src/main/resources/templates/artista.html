@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <!-- logo -->
-    <link rel=icon href="@{image/museo.png}">
+    <link rel=icon th:href="@{image/museo.png}">
     <!-- titolo mostrato per la pagina dell'itinerario -->
     <title>Artista</title>
     <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
-    <link rel="stylesheet" href="@{css/artista.css}" />
+    <link rel="stylesheet" th:href="@{css/artista.css}" />
     <!--font preso da google-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@700&display=swap"
@@ -19,13 +19,13 @@
     <nav>
         <!-- caricamento immagine logo a sinistra con uno spazio prima del nome della agenzia -->
         <div class="titolo">
-            <img src="@{image/logo.png}" width="80px" height="70px" align="left" hspace="20px" />
+            <img th:src="@{image/logo.png}" width="80px" height="70px" align="left" hspace="20px" />
             <h2>Museo dell'arte impressionista</h2>
         </div>
 
         <ul>
             <li>
-                <!-- collegamento ipertestuale alla home --> <a href="index">
+                <!-- collegamento ipertestuale alla home --> <a href="/">
                     Home
                 </a>
             </li>
@@ -76,10 +76,10 @@
             <h2 class="primo"></h2>
         </div>
         <div>
-            <img src="@{image/notteStellata.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
-            <img src="@{image/opera2.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
-            <img src="@{image/patate.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
-            <img src="@{image/autoritratto.jpg}" width="300px"  height="200px" hspace="15px" vspace="15px" />
+            <img th:src="@{image/notteStellata.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
+            <img th:src="@{image/opera2.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
+            <img th:src="@{image/patate.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
+            <img th:src="@{image/autoritratto.jpg}" width="300px"  height="200px" hspace="15px" vspace="15px" />
         </div>
         <div>
             <a href="opera" class="descr"> Notte stellata</a> 
@@ -88,10 +88,10 @@
             <a href="opera" class="descr"> Autoritratto</a>
         </div>
         <div>
-            <img src="@{image/girasoli.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
-            <img src="@{image/grano.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
-            <img src="@{image/iris.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
-            <img src="@{image/casa.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" />
+            <img th:src="@{image/girasoli.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
+            <img th:src="@{image/grano.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
+            <img th:src="@{image/iris.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
+            <img th:src="@{image/casa.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" />
         </div>
         <div>
             <a href="opera" class="descr2">I girasoli </a> 
@@ -118,7 +118,7 @@
                 <p>museodellarteimpressionista@gmail.com</p>
             </div>
             <div class="logo">
-                <img src="@{image/logoBianco.png}" height="60" width="60" align="right">
+                <img th:src="@{image/logoBianco.png}" height="60" width="60" align="right">
             </div>
         </div>
     </div>

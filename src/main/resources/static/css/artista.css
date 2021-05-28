@@ -14,12 +14,12 @@ nav {
     background-color:darkred ;
     z-index:1;
 }
-/* Stile per la barra principale. Il colore è il celestino, con la scritta nera*/
+/* Stile per la barra principale. Il colore ï¿½ il celestino, con la scritta nera*/
     nav .titolo {
         padding: 5px;
         color: #FFF;
     }
-    /* Stile per i link presenti nella barra principale. Il testo è allineato a destra*/
+    /* Stile per i link presenti nella barra principale. Il testo ï¿½ allineato a destra*/
     nav ul {
         list-style:none;
         float:right;
@@ -40,7 +40,7 @@ nav {
     
 .parallax
 {
-	background: url(vangogh.jpg)
+	background: url(../image/vangogh.jpg)
 	repeat fixed 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -102,16 +102,17 @@ padding-left:100px;
 
 /*Contatti e mappa*/
 .contact {
-    width: 100%;
+    width: 98%;
     height: auto;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 1%;
     background-color: black;
     border-top: solid 2px;
     border-color: white;
 }
+
 
 .contact-map {
     width:100%;

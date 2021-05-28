@@ -13,13 +13,13 @@ nav {
     background-color: darkred;
     z-index: 1;
 }
-/* Stile per la barra principale. Il colore è il celestino, con la scritta nera*/
+/* Stile per la barra principale. Il colore ï¿½ il celestino, con la scritta nera*/
 nav .titolo {
     padding: 10px;
     font-size: 20px;
     color: #FFF;
 }
-/* Stile per i link presenti nella barra principale. Il testo è allineato a destra*/
+/* Stile per i link presenti nella barra principale. Il testo ï¿½ allineato a destra*/
 nav ul {
     list-style: none;
     float: right;
@@ -85,24 +85,24 @@ h1, h3, h4, p {
 }
 
 .opera1, .opera2, .opera3, .opera4 {
-    width: 100%;
+    width: 98%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 1%;
     background-color: black;
 }
 
 .img {
-    width: 100%;
+    width: 50%;
     height: auto;
-    flex: 50%;
+    flex: 40%;
 }
 
 .descrizione {
-    width: 100%;
+    width: 50%;
     height: auto;
-    flex: 50%;
+    flex: 60%;
     text-align: center;
     
 }
@@ -122,15 +122,16 @@ h1, h3, h4, p {
 
 /*Contatti e mappa*/
 .contact {
-    width: 100%;
-    height: auto;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    background-color: black;
-    border-top: solid 2px;
+    width:98%;
+    height:auto;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    padding:1%;
+    background-color:black;
+     border-top: solid 2px;
     border-color: white;
+
 }
 
 .contact-map {

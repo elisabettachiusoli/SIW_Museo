@@ -4,22 +4,22 @@
 <head>
 <meta charset="utf-8" />
 <!-- logo -->
-<link rel=icon href="@{image/museo.png}">
+<link rel=icon th:href="@{image/museo.png}">
 <title>Nome Opera</title>
-<link rel="stylesheet" href="@{css/opera.css}" />
+<link rel="stylesheet" th:href="@{css/opera.css}" />
 </head>
 <body>
 	<nav>
 		<!-- caricamento immagine logo a sinistra con uno spazio prima del nome della agenzia -->
 		<div class="titolo">
-			<img src="@{image/logo.png}" width="80px" height="70px" align="left"
+			<img th:src="@{image/logo.png}" width="80px" height="70px" align="left"
 				hspace="20px" />
 			<h2>Museo dell'arte impressionista</h2>
 		</div>
 
 		<ul>
 			<li>
-				<!-- collegamento ipertestuale alla home --> <a href="index">
+				<!-- collegamento ipertestuale alla home --> <a href="/">
 					Home </a>
 			</li>
 			<li>
@@ -39,8 +39,8 @@
 
 	</nav>
 	<section>
-		<img src="@{image/notteStellata.jpg}" width="500px" height="700px"
-			hspace="15px" align="left" />
+		<img th:src="@{image/notteStellata.jpg}" width="500px" height="700px"
+			hspace="15px" vspace="15px" align="left" />
 		<section id="paragrafo">
 			<p>
 			<h1 class="titolo">Nome Opera</h1>
@@ -70,7 +70,7 @@
 				<p>museodellarteimpressionista@gmail.com</p>
 			</div>
 			<div class="logo">
-				<img src="@{image/logoBianco.png}" height="60" width="60" align="right">
+				<img th:src="@{image/logoBianco.png}" height="60" width="60" align="right">
 			</div>
 		</div>
 	</div>

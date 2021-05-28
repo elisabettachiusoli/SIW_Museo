@@ -4,24 +4,24 @@
 <head>
 <meta charset="utf-8" />
 <!-- logo -->
-<link rel=icon href="@{image/museo.png}">
+<link rel=icon th:href="@{image/museo.png}">
 <!-- titolo mostrato per la pagina dell'itinerario -->
 <title>Informazioni</title>
 <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
-<link rel="stylesheet" href="@{css/informazioni.css}" />
+<link rel="stylesheet" th:href="@{css/informazioni.css}" />
 </head>
 <body>
 	<nav>
 		<!-- caricamento immagine logo a sinistra con uno spazio prima del nome della agenzia -->
 		<div class="titolo">
-			<img src="@{image/logo.png}" width="80px" height="70px" align="left"
+			<img th:src="@{image/logo.png}" width="80px" height="70px" align="left"
 				hspace="20px" />
 			<h2>Museo dell'arte impressionista</h2>
 		</div>
 
 		<ul>
 			<li>
-				<!-- collegamento ipertestuale alla home --> <a href="index">
+				<!-- collegamento ipertestuale alla home --> <a href="/">
 					Home </a>
 			</li>
 			<li>
@@ -41,12 +41,20 @@
 	<section class="parallax">
 		<div class="parallax-inner">Informazioni</div>
 	</section>
-	<section>
-		<div class="info">
+	<section class="info">
+		<div >
 			<p>
 				ORARI: <br> Lun-Ven 9:00-17:00 <br> Sab-Dom 9:00-20:00 <br>
 
 				NOTTE BIANCA: 20 giugno 21:00-00:00
+			</p>
+			<p>
+			PREZZI BIGLIETTI: </br>
+			Intero                               12€ </br>
+			Ridotto (over 70. enti)              10€ </br>
+			Ridotto Junior(sotto i 12 anni)       6€ </br>
+			Ridotto Studenti                      6€ </br>
+			Family Ticket (2 adulti + 2 bambini) 24€  
 			</p>
 		</div>
 
@@ -68,7 +76,7 @@
 				<p>museodellarteimpressionista@gmail.com</p>
 			</div>
 			<div class="logo">
-				<img src="@{image/logoBianco.png}" height="60" widht="60" align="right">
+				<img th:src="@{image/logoBianco.png}" height="60" widht="60" align="right">
 			</div>
 		</div>
 	</div>
