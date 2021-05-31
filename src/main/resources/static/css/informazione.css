@@ -1,0 +1,24 @@
+body {
+    /* Stili per i titoli: Gill Sans per h1, Gill Sans MT per h2, Trebuchet MS per h3. sans-serif per h4  */
+    font-family: 'Noto Sans HK', sans-serif;
+    margin: 0;
+}
+
+    
+.parallax
+{
+	background: url(../image/foto.jpg)
+	repeat fixed 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+.parallax-inner {
+    padding-top: 25%;
+    padding-left: 80px;
+    text-align: left;
+    font-size: 40px;
+    color: #000;
+
+}
+
