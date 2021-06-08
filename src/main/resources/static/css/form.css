@@ -1,18 +1,17 @@
 body {
     /* Stili per i titoli: Gill Sans per h1, Gill Sans MT per h2, Trebuchet MS per h3. sans-serif per h4  */
-    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+    font-family: 'Noto Sans HK', sans-serif;
     margin: 0;
     padding:0;
-    background-image: url("../image/foto.jpg");
+    background-image: url("../image/museo3.jpg");
     background-size: cover;
 }
 
 /* Stile per il form, generalit� per tutti: immagine del mare senza ripetizioni per tutto il blocco, bordi neri e scritte nere*/
 #modulo {
-    border-top: solid 2px #000;
-    border-bottom: solid 2px #000;
+    border-top: solid 2px white;
     padding: 100px;
-    color: #000;
+    color: white;
     overflow: hidden;
     position: relative;    
 }
@@ -31,11 +30,11 @@ body {
             indicare che � possibile cliccarci sopra
         */
  .pulsante {
-        color: #000;
+        color: white;
         background:darkred;
-        margin-top: 80px;
+        margin-top: 10px;
         margin-bottom: 20px;
-        border: 2px #000;
+        border: 2px white;
         border-radius: 20px;
         padding:20px 20px;
         text-transform: uppercase;
@@ -55,11 +54,11 @@ body {
         padding-top: 10px;
         text-align: left;
         text-decoration: solid;
-        font-size: 16px;
+        font-size: 22px;
     }
     /* Stile per gli input, con background sfumato*/
 #modulo input {
-    border: solid 1px #000;
+    border: solid 1px white;
     margin-left: 10px;
     background: darkred;
 }
@@ -67,6 +66,6 @@ body {
 	color: darkred;
 	text-align: right;
 	padding-left: 10px;
-	font-size: 6px;
+	font-size: 9px;
 }
     
