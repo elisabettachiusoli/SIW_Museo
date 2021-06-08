@@ -19,22 +19,26 @@
 
         <ul>
             <li>
-                <!-- collegamento ipertestuale alla home --> <a href="/">
-                    Home
-                </a>
+                <!-- collegamento ipertestuale alla home --> 
+                <a href="/">Home</a>
             </li>
             <li>
-                <!-- collegamento ipertestuale alla pagina itinerari --> <a href="artisti"> Autori </a>
+                <!-- collegamento ipertestuale alla pagina itinerari --> 
+                <a href="artisti"> Autori </a>
             </li>
             <li>
-                <!-- collegamento ipertestuale alla pagina itinerari --> <a href="collezione"> Collezioni </a>
+                <!-- collegamento ipertestuale alla pagina itinerari --> 
+                <a href="collezione"> Collezioni </a>
             </li>
             <li>
-                <!-- collegamento ipertestuale alla pagina informazioni --> <a href="informazioni"> Informazioni</a>
+                <!-- collegamento ipertestuale alla pagina informazioni --> 
+                <a href="informazioni"> Informazioni</a>
             </li>
         </ul>
     </nav>
     </header>
+    
+    
     <footer th:fragment="fondo">
     <div class="contact">
 		<div class="contact-map">
@@ -51,6 +55,12 @@
 				<p>+39 06 5733 2100</p>
 				<h3>Email</h3>
 				<p>museodellarteimpressionista@gmail.com</p>
+				</br>
+				
+				<a th:href="@{/login}"><strong>Accedi<strong></a>
+				<p>o</p>
+				<a th:href="@{/register}" ><strong>Registrati<strong></a>
+				
 			</div>
 			<div class="logo">
 				<img th:src="@{image/logoBianco.png}" height="60" widht="60" align="right">

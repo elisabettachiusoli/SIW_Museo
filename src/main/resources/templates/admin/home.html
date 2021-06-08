@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="fragments/base.html :: headerfiles(title='SIW')"> </head>
+<body>
+	<header th:replace="fragments/base.html :: intestazione"></header>
+    <section>
+    <div>
+    	<h4 th:text="#{header.index}">Menu</h4>
+		<div>
+			<a th:href="@{/artista}">Elenco artisti</a>
+   		</div>
+   		<div>
+			<a th:href="@{/admin/addArtista}">Inserisci dati artista</a>
+   		</div>
+   		<div>
+			<a th:href="@{/opera}">Elenco opere</a>
+   		</div>
+   		<div>
+			<a th:href="@{/admin/addOpera}">Inserisci dati opera</a>
+   		</div>
+   		
+   		<div>
+			<a th:href="@{/logout}">Logout</a>
+   		</div>
+    </div>
+    </section>
+    <footer></footer>
+</body>
+</html>
