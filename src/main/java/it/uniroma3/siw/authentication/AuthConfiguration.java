@@ -1,4 +1,4 @@
-package it.uniroma3.siw.spring.authentication;
+package it.uniroma3.siw.authentication;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -61,9 +61,10 @@ public class AuthConfiguration extends WebSecurityConfigurerAdapter {
 
                 // logout paragraph: qui definiamo il logout
                 .and().logout()
-                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                
                 // il logout è attivato con una richiesta GET a "/logout"
                 .logoutUrl("/logout")
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 // in caso di successo, si viene reindirizzati alla /index page
                 .logoutSuccessUrl("/index")        
                 .invalidateHttpSession(true)
