@@ -17,24 +17,23 @@ public class MainController {
         return "home";
     }
 	
-	@RequestMapping(value="/artista", method = RequestMethod.GET)
+	@RequestMapping(value={"/artista"}, method = RequestMethod.GET)
     public String artista(Model model) {
         return "artista";
-    } /*
-	
+    }
 	   
-	   @RequestMapping(value="/collezione", method = RequestMethod.GET)
-	    public String getGuida() {
-	        return "collezione.html";
-	    }
-	   
-	   @RequestMapping(value="/opera", method = RequestMethod.GET)
-	    public String getMonumento() {
-	    	
-	        return "opera.html";
-	    }
-	   @RequestMapping(value="/informazioni", method = RequestMethod.GET)
-	    public String getInfo() {
-	        return "informazioni.html";
-	    }*/
+   @RequestMapping(value={"/collezione"}, method = RequestMethod.GET)
+    public String collezione(Model model) {
+        return "collezione";
+    }
+   
+   @RequestMapping(value={"/opera"}, method = RequestMethod.GET)
+    public String opera(Model model) {    	
+        return "opera";
+    }
+   
+   @RequestMapping(value={"/informazioni"}, method = RequestMethod.GET)
+    public String informazioni(Model model) {
+        return "informazioni";
+    }
 }

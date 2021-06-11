@@ -1,14 +1,15 @@
 body {
     /* Stili per i titoli: Gill Sans per h1, Gill Sans MT per h2, Trebuchet MS per h3. sans-serif per h4  */
-    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', Calibri;
+    font-family: 'Noto Sans HK', sans-serif;
     margin: 0;
-    background-color: #880202;
+    background-color: white;
 
 }
 
 #paragrafo {
     text-align: justify;
-    font-size: 34px;
+    font-size: 17px;
+    margin-right: 10px;
 
 }
 .titolo {
@@ -18,21 +19,12 @@ body {
  
 }
 .descr {
-    text-align: center;
+    margin-top: 20px;
     padding-bottom: 30px;
     font-size: 20px;
-    color: #808080;
+    color: darkred;
+    text-decoration: none;
+    
 }
 
-/*Contatti e mappa*/
-.contact {
-    width:98%;
-    height:auto;
-    margin:auto;
-    display:flex;
-    flex-wrap:wrap;
-    padding:1%;
-    background-color:black;
-
-}
 
