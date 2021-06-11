@@ -116,6 +116,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+	color:black;
+}
+
 .checkbox:checked ~ .menu {
     background-color: darkred;
     top: 0rem;
