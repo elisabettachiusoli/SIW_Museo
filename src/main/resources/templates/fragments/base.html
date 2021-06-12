@@ -4,7 +4,7 @@
 
 <head th:fragment="headerfiles(title)">
 	<meta charset="UTF-8" />
-	<link th:href="@{css/base.css}" rel="stylesheet">
+	<link th:href="@{/css/base.css}" rel="stylesheet">
 	<title th:text="${title}"></title>
 </head>
 
@@ -13,7 +13,7 @@
 <nav>
         <!-- caricamento immagine logo a sinistra con uno spazio prima del nome della agenzia -->
         <div class="titolo">
-            <img th:src="@{image/logo.png}" width="80" height="70" align="left" hspace="10" />
+            <img th:src="@{/image/logo.png}" width="80" height="70" align="left" hspace="10" />
             <h2>Museo dell'arte impressionista</h2>
         </div>
 
@@ -63,7 +63,7 @@
 				
 			</div>
 			<div class="logo">
-				<img th:src="@{image/logoBianco.png}" height="60" widht="60" align="right">
+				<img th:src="@{/image/logoBianco.png}" height="60" widht="60" align="right">
 			</div>
 		</div>
 	</div>

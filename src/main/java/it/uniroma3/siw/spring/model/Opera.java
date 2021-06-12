@@ -41,4 +41,38 @@ public class Opera {
 	public Opera() {
 		this.collezioni=new ArrayList<>();
 	}
+	
+	public Long getId() {
+		return this.id;
+	}
+	public String getTitolo() {
+		return this.titolo;
+	}
+	public void setTitolo(String titolo) {
+		this.titolo=titolo;
+	}
+	public int getAnno() {
+		return this.anno;
+	}
+	public void setAnno(int anno) {
+		this.anno=anno;
+	}
+	public String getDescrizione() {
+		return this.descrizione;
+	}
+	public void setDescrizione(String descrizione) {
+		this.descrizione=descrizione;
+	}
+	public Artista getArtista() {
+		return this.artista;
+	}
+	public void setArtista(Artista artista) {
+		this.artista=artista;
+	}
+	public List<Collezione> getCollezioni() {
+		return this.collezioni;
+	}
+	public void setCollezioni(Collezione collezione) {
+		this.collezioni.add(collezione);
+	}
 }

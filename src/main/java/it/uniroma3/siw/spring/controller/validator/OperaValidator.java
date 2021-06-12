@@ -9,14 +9,16 @@ import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 import it.uniroma3.siw.spring.model.Artista;
+import it.uniroma3.siw.spring.model.Opera;
 import it.uniroma3.siw.spring.service.ArtistaService;
+import it.uniroma3.siw.spring.service.OperaService;
 
 @Component
-public class ArtistaValidator implements Validator {
+public class OperaValidator implements Validator {
 	@Autowired
-	private ArtistaService artistaService;
+	private OperaService operaService;
 	
-    private static final Logger logger = LoggerFactory.getLogger(ArtistaValidator.class);
+    private static final Logger logger = LoggerFactory.getLogger(OperaValidator.class);
 
 	@Override
 	public void validate(Object o, Errors errors) {
@@ -25,7 +27,7 @@ public class ArtistaValidator implements Validator {
 
 		if (!errors.hasErrors()) {
 			logger.debug("confermato: valori non nulli");
-			if (this.artistaService.alreadyExists((Artista)o)) {
+			if (this.operaService.alreadyExists((Opera)o)) {
 				logger.debug("e' un duplicato");
 				errors.reject("duplicato");
 			}
@@ -34,7 +36,7 @@ public class ArtistaValidator implements Validator {
 
 	@Override
 	public boolean supports(Class<?> aClass) {
-		return Artista.class.equals(aClass);
+		return Opera.class.equals(aClass);
 	}
 
 }

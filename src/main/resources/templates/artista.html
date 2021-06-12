@@ -4,27 +4,28 @@
 <head>
     <meta charset="utf-8" />
     <!-- logo -->
-    <link rel=icon th:href="@{image/museo.png}">
+    <link rel=icon th:href="@{/image/museo.png}">
     <!-- titolo mostrato per la pagina dell'itinerario -->
     <title>Artista</title>
     <!-- riferimento al foglio di stile css chiamato stile in stili relativo a tutto il progetto -->
-    <link rel="stylesheet" th:href="@{css/artista.css}" />
+    <link rel="stylesheet" th:href="@{/css/artista.css}" />
     <!--font preso da google-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@700&display=swap"
           rel="stylesheet">
-          <link th:href="@{css/base.css}" rel="stylesheet">
+          <link th:href="@{/css/base.css}" rel="stylesheet">
 
 </head>
 <body>
     <header th:replace="fragments/base.html :: intestazione"></header>
+    <div th:if="${artista}" th:object="${artista}">
     <section class="parallax">
-        <div class="parallax-inner"><h1>Vincent Van Gogh</h1></div>
+        <div class="parallax-inner"><h1 th:text="*{nome} + ' ' + *{cognome}">kklk</h1></div>
     </section>
 
     <section id="biografia">
-        30 marzo 1853, Zundert, Paesi Bassi - 29 luglio 1890, Auvers-sur-Oise, Francia
-        <div class="bio">
+        <div th:text="*{dataDiNascita}"> </div> <span th:text="*{luogoDiNascita}">Zundert, Paesi Bassi -</span> <span th:text="*{dataDiMorte}"> </span> <span th:text="*{luogoDiMorte}">Auvers-sur-Oise, Francia</span>
+        <div class="bio" th:text="*{descrizione}">
             <p>
                 Fu autore di quasi novecento dipinti e di più di mille
                 disegni, senza contare i numerosi schizzi non portati a termine.
@@ -50,33 +51,21 @@
             <h2>OPERE</h2>
             <h2 class="primo"></h2>
         </div>
-        <div>
-            <img th:src="@{image/notteStellata.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
-            <img th:src="@{image/opera2.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
-            <img th:src="@{image/patate.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
-            <img th:src="@{image/autoritratto2.jpg}" width="300px"  height="200px" hspace="15px" vspace="15px" />
+        <div th:if="${opera}" th:object="${opera}">
+        <ul>
+			<li th:each="artista.opere : ${opere}">
+			<img th:src="@{/image/notteStellata.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
+				<a href="opera.html" 
+				   th:href="@{'/opera' + '/' + ${opera.id}}" 
+				   th:text="${opera.nome}">Notte stellata</a>
+			</li>
+		</ul>
         </div>
-        <div>
-            <a href="opera" class="descr"> Notte stellata</a> 
-            <a href="opera" class="descr"> Notte stellata sul rodano </a> 
-            <a href="opera" class="descr"> I mangiatori di patate</a> 
-            <a href="opera" class="descr"> Autoritratto</a>
-        </div>
-        <div>
-            <img th:src="@{image/girasoli.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
-            <img th:src="@{image/grano.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
-            <img th:src="@{image/iris.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
-            <img th:src="@{image/casa.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" />
-        </div>
-        <div>
-            <a href="opera" class="descr2">I girasoli </a> 
-            <a href="opera" class="descr2"> Campo di grano con volo di corvi</a> 
-            <a href="opera" class="descr2"> Iris</a> 
-            <a href="opera" class="descr2"> La Camera di Vincent ad Arles </a>
-        </div>
-
+    <div th:unless="${opera}">Questa opera non esiste</div>
     </section>
-
+</div>
+    	<div th:unless="${artista}" th:style="'color:white'">Questo artista non esiste</div>
+    </div>
    <footer th:replace="fragments/base.html :: fondo"></footer>
 
 </body>
