@@ -95,15 +95,13 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version> 3.1.0 </version>
 				<configuration>
                   <archive>
                     <manifest>
-
-                    <!-- give full qualified name of your main class-->
+ <!-- give full qualified name of your main class-->
                       <mainClass>it.uniroma3.siw.MuseoApplication</mainClass>
-
                     </manifest>
                   </archive>
                 </configuration>
