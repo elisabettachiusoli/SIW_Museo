@@ -10,8 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 public class Curatore {
@@ -19,33 +17,19 @@ public class Curatore {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
-	
-	@Getter
-	@Setter
+
 	private String nome;
-	
-	@Getter
-	@Setter
+
 	private String cognome;
-	
-	@Getter
-	@Setter
+
 	private int numeroDiTelefono;
-	
-	@Getter
-	@Setter
+
 	private String email;
-	
-	@Getter
-	@Setter
+
 	private LocalDate dataDiNascita;
-	
-	@Getter
-	@Setter
+
 	private String luogoDiNascita;
-	
-	@Getter
-	@Setter
+
 	private int matricola;
 	
 	@OneToMany(mappedBy="curatore")
@@ -53,6 +37,78 @@ public class Curatore {
 	
 	public Curatore() {
 		this.collezioni=new ArrayList<>();
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getCognome() {
+		return cognome;
+	}
+
+	public void setCognome(String cognome) {
+		this.cognome = cognome;
+	}
+
+	public int getNumeroDiTelefono() {
+		return numeroDiTelefono;
+	}
+
+	public void setNumeroDiTelefono(int numeroDiTelefono) {
+		this.numeroDiTelefono = numeroDiTelefono;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public LocalDate getDataDiNascita() {
+		return dataDiNascita;
+	}
+
+	public void setDataDiNascita(LocalDate dataDiNascita) {
+		this.dataDiNascita = dataDiNascita;
+	}
+
+	public String getLuogoDiNascita() {
+		return luogoDiNascita;
+	}
+
+	public void setLuogoDiNascita(String luogoDiNascita) {
+		this.luogoDiNascita = luogoDiNascita;
+	}
+
+	public int getMatricola() {
+		return matricola;
+	}
+
+	public void setMatricola(int matricola) {
+		this.matricola = matricola;
+	}
+
+	public List<Collezione> getCollezioni() {
+		return collezioni;
+	}
+
+	public void setCollezioni(List<Collezione> collezioni) {
+		this.collezioni = collezioni;
 	}
 
 }
