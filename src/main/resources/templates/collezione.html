@@ -21,15 +21,17 @@
 </head>
 <body>
 <header th:replace="fragments/base.html :: intestazione"></header>
-    
+    <div th:if="${collezione}" th:object="${collezione}">
+        
         <section id="title">
             <h1 class="big-text">Collezione</h1>
         </section>
+        
         <section id="descrizione">
-            <h3 class="med-text">Galleria dell'arte impressionista e post-impressionista</h3>
-            <h4>a cura di Serena Bruni</h4>
+            <h3 class="med-text" th:text="|${collezione.nome}|">Galleria dell'arte impressionista e post-impressionista</h3>
+            <h4><span th:text="|*{curatore.nome} *{curatore.cognome}|">a cura di Serena Bruni</span></h4>
             <div class="testo">
-                <p>
+                <p th:text="|*{descrizione}|">
                     Dal 16 giugno al <strong> Museo dell'arte impressionista </strong> apre la mostra <strong> Impressionisti e Post-impressionisti </strong>, prodotta e organizzata da <strong>Serena Bruni</strong>. </br> 
                     Per celebrare l'apertura del Museo saranno esposte oltre 50 opere dei <strong>più grandi maestri </strong>dell’impressionismo (Claude Monet, Edgar Degas, Edouard Manet, Pierre Auguste Renoir) e del post impressionismo ( Vincent van Gogh).
                     Opere provenienti da collezioni private raramente accessibili e concessi eccezionalmente per questa mostra.
@@ -55,8 +57,8 @@
                 <img th:src="@{/image/opera2.jpg}" width="500" height="400" hspace="15" vspace="15">
             </div>
             <div class="descrizione">
-                <a href="opera" class="descr">Notte stellata sul Rodano</a>
-                <a href="artista" class="descr">Vincent van Gogh</a>
+                <a href="opera" class="descr" th:href="{'/opera' + '/' + ${opera.id}}" th:text="|${opera.titolo}|">Notte stellata sul Rodano</a>
+                <a href="artista" class="descr" th:href="{'/artista' + '/' + ${opera.artista.id}}" th:text="|${opera.artista.nome} ${opera.artista.cognome}|">Vincent van Gogh</a>
                 <div class="citazione">
                     <p>"Io penso spesso che la notte sia più viva e più riccamente colorata del giorno."</p>
                 </div>
@@ -88,7 +90,10 @@
                 </div>
             </div>
         </div>
-
+    </div>
+    
+    <div th:unless="${collezione}">Non esiste questa collezione</div>
+   
    <footer th:replace="fragments/base.html :: fondo"></footer>
 </body>
 </html>

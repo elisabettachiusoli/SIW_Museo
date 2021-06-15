@@ -21,7 +21,7 @@
     <section id="modulo">
 	<div class="content">
     <div>
-		<h4>Inserisci i dati dell'artista</h4>
+		<h4>Inserisci i dati della collezione</h4>
 	</div>
 	<form th:action="@{/admin/collezione}" method="POST" th:object="${collezione}">	
 		<div>
@@ -32,7 +32,11 @@
 			<div>
 				<label>Descrizione:</label>
 				<span><input type="text" th:field="*{descrizione}" /></span>
-			</div>	
+			</div>
+			<div>
+				<label>Curatore id:</label>
+				<span><input type="text" th:field="*{curatore.id}" /></span>
+			</div>		
 			 <!-- <div>
 				<label>Opera:</label>
 				<span><input type="text" th:field="*{opere.titolo}" name="opera" /></span>
@@ -41,7 +45,15 @@
 			</div>
 		</div>
 	</form>
-	<footer th:replace="fragments/base.html :: fondo"></footer>
+	<div>
+		<h2>Curatori con id</h2>
+		<ul>
+			<li th:each="curatore: ${curatori}">
+				<p th:text="|${curatore.nome} ${curatore.cognome}: {curatore.id}|">Nome curatore</p>
+			</li>
+		</ul>
+	</div>	
+	<footer></footer>
 </body>
 </html>
     

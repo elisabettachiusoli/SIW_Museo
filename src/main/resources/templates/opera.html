@@ -13,8 +13,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@700&display=swap" rel="stylesheet">	
 	
-	<link rel="stylesheet" th:href="@{css/opera.css}" />
-	<link th:href="@{css/base.css}" rel="stylesheet">
+	<link rel="stylesheet" th:href="@{/css/opera.css}" />
+	<link th:href="@{/css/base.css}" rel="stylesheet">
 </head>
 <body>
 	<section>
@@ -23,11 +23,11 @@
 			hspace="15px" vspace="15px" align="left" />
 		<section id="paragrafo">
 			<p>
-			<h1 class="titolo">Notte stellata</h1>
+			<h1 class="titolo" th:if="${opera.titolo}">Notte stellata</h1>
 			<div class="descr">
 				<a href="artista" class="descr"> Vincent van Gogh </a>, 1889
 			</div>
-			<p>
+			<p th:text="*{descrizione}">
 			Nel 1888, prima dell'internamento a Saint-Rémy, van Gogh scrisse: </br></br>
 			"Con un quadro vorrei poter esprimere qualcosa di commovente come una musica. </br>Vorrei dipingere uomini e donne con un non so che di eterno, di cui un tempo era simbolo l’aureola, e che noi cerchiamo di rendere con lo stesso raggiare, con la vibrazione dei colori [...].</br> Ah il ritratto, il ritratto che mostri i pensieri, l’anima del modello: ecco cosa credo debba vedersi"
 			</br></br>
@@ -37,7 +37,8 @@
 			<a href="artista" class="descr"> Torna indietro </a>
 		</section>
 	</section>
-
+	</div>
+	<div th:unless="${opera}">Non esiste questa opera</div>
 	<footer th:replace="fragments/base.html :: fondo"></footer>
 </body>
 </html>

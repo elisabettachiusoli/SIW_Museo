@@ -16,6 +16,7 @@ import it.uniroma3.siw.spring.model.Collezione;
 import it.uniroma3.siw.spring.model.Opera;
 import it.uniroma3.siw.spring.repository.OperaRepository;
 import it.uniroma3.siw.spring.service.CollezioneService;
+import it.uniroma3.siw.spring.service.OperaService;
 
 @Controller
 public class CollezioneController {
@@ -23,6 +24,7 @@ public class CollezioneController {
 	@Autowired
 	private CollezioneService collezioneService;
 	private OperaRepository operaRepository;
+	private OperaService operaService;
 
 	@RequestMapping(value="/admin/addCollezione", method = RequestMethod.GET)
 	public String addOpera(Model model) {
@@ -37,24 +39,23 @@ public class CollezioneController {
 		return "collezione";
 	}
 
-	  @RequestMapping(value = "/collezioni", method = RequestMethod.GET)
-	    public String getArtisti(Model model) {
-	    		model.addAttribute("collezione", this.collezioneService.tutti());
-	    		return "collezioni";
-	    }
+	@RequestMapping(value = "/collezioni", method = RequestMethod.GET)
+    public String getCollezioni(Model model) {
+		model.addAttribute("collezione", this.collezioneService.tutti());
+		return "collezioni";
+    }
 	    
-	    @RequestMapping(value = "/admin/collezione", method = RequestMethod.POST)
-	    public String addProdotto(@ModelAttribute("collezione")Collezione collezione,
-	    									Model model, BindingResult bindingResult) {
-	    	//this.collezioneValidator.validate(collezione, bindingResult);  
-	            //List<Opera> opera= operaRepository.findByTitolo(nome);
-	           // collezione.addOpera(opera);
-	            //for( Opera op : opera) 
-	            //op.setCollezioni(collezione);
-	            this.collezioneService.inserisci(collezione);
-	            model.addAttribute("collezione", this.collezioneService.tutti());
-	            return "collezione";
-
+	@RequestMapping(value = "/admin/collezione", method = RequestMethod.POST)
+	public String addCollezione(@ModelAttribute("collezione")Collezione collezione,
+										Model model, BindingResult bindingResult) {
+		//this.collezioneValidator.validate(collezione, bindingResult);  
+	        //List<Opera> opera= operaRepository.findByTitolo(nome);
+	       // collezione.addOpera(opera);
+	        //for( Opera op : opera) 
+	        //op.setCollezioni(collezione);
+	        this.collezioneService.inserisci(collezione);
+	        model.addAttribute("collezione", this.collezioneService.tutti());
+	        return "collezione";
+	
 	}
-
 }
