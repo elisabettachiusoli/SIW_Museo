@@ -18,7 +18,8 @@
 </head>
 <body>
 	<section>
-		<img th:src="@{image/notteStellata.jpg}" width="700px" height="500px"
+	<div th:if="${opera}" th:object="${opera}" >
+		<img th:src="@{'image/' + '*{opera.titolo}' + '/' + *{opera.id} + '.jpg'}" width="700px" height="500px"
 			hspace="15px" vspace="15px" align="left" />
 		<section id="paragrafo">
 			<p>

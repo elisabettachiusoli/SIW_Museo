@@ -36,15 +36,22 @@
 			<div>
 				<label>Descrizione:</label>
 				<span><input type="text" th:field="*{descrizione}" /></span>
-			</div>	
-			<div>
+			
+			<!-- <div>
 				<label>Nome Artista:</label>
 				<span><input type="text" th:field="*{artista.nome}" /></span>
-			</div>
+			</div> -->
 			<div>
 				<span><button type="submit" class="pulsante">Conferma Opera</button></span>
 			</div>
 		</div>
+	</form>
+	<form method="POST" enctype="multipart/form-data" action="/upload">
+	</div>	
+				<label>Immagine Opera:</label>
+				<span th:style="'color:white'"><input type="file" name="file" /></span>
+			</div>
+		<span><button type="submit" class="pulsante">Aggiungi immagine</button></span>	
 	</form>
 	<footer th:replace="fragments/base.html :: fondo"></footer>
 </body>

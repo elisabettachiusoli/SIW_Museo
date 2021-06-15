@@ -1,14 +1,20 @@
 package it.uniroma3.siw.spring.model;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import org.springframework.mock.web.MockMultipartFile;
+import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -34,6 +40,7 @@ public class Opera {
 	
 	@ManyToOne
 	private Artista artista;
+	
 	
 	@OneToMany
 	private List<Collezione> collezioni;
@@ -75,4 +82,5 @@ public class Opera {
 	public void setCollezioni(Collezione collezione) {
 		this.collezioni.add(collezione);
 	}
+	
 }

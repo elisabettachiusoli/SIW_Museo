@@ -18,13 +18,17 @@
 </head>
 <body>
     <header th:replace="fragments/base.html :: intestazione"></header>
-    <ul class="push">
+    <ul class="push" >
 			<li th:each="opera : ${opera}">
 				<a href="opera.html" 
 				   th:href="@{'/opera' + '/' + ${opera.id}}" 
-				   th:text="${opera.titolo} ':'" th:style="'color:black'"> Collezioni</a>
+				   th:text="${opera.titolo} +':'" th:style="'color:black'"> Collezioni</a>
+				   <img th:src="@{'/image/' + *{opera.titolo} + *{opera.id} + '.jpg'}" width="300px" height="100px"
+			hspace="15px" vspace="15px" align="right" />
+				   </li>
 				  
-			</li>
+				  
+			
 		</ul>
 		 <footer th:replace="fragments/base.html :: fondo"></footer>
 </body>
