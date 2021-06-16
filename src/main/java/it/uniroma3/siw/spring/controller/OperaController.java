@@ -53,8 +53,8 @@ public String getArtista(@PathVariable("id") Long id, Model model) {
     }
     
     @RequestMapping(value = "/admin/opera", method = RequestMethod.POST)
-    public String addArtista(@ModelAttribute("opera") Opera opera, Artista artista, @RequestParam("file") MultipartFile file,
-    									Model model, BindingResult bindingResult) throws IllegalStateException, IOException {
+    public String addArtista(@ModelAttribute("opera") Opera opera, Artista artista,
+    									Model model, BindingResult bindingResult) {
     	this.operaValidator.validate(opera, bindingResult);
         	this.operaService.inserisci(opera);
      //   	this.fileService.uploadFile(file, opera.getTitolo(), opera.getId());

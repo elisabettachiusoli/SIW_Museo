@@ -1,13 +1,16 @@
 package it.uniroma3.siw.spring.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -25,7 +28,7 @@ public class Collezione {
 	@Column(nullable=false, length=3000)
 	private String descrizione;
 	
-	@OneToMany(mappedBy="collezioni")
+	@ManyToMany(fetch = FetchType.EAGER)
 	private List<Opera> opere;
 	
 	@ManyToOne
@@ -69,7 +72,7 @@ public class Collezione {
 	public void setOpere(List<Opera> opere) {
 		this.opere = opere;
 	}
-	public void addOpera(List<Opera> opera) {
+	public void addOpera(List<Opera>  opera) {
 		this.opere.addAll(opera);
 	}
 

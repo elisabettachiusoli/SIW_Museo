@@ -37,13 +37,13 @@
 				<label>Curatore id:</label>
 				<span><input type="text" th:field="*{curatore.id}" /></span>
 			</div>		
-			 <!-- <div>
-				<label>Opera:</label>
-				<span><input type="text" th:field="*{opere.titolo}" name="opera" /></span>
-			</div>	-->
-				<span><button type="submit" class="pulsante">Conferma Collezione</button></span>
-			</div>
-		</div>
+			<label>Seleziona opera:</label>
+			<select name="operaSelezionata" >
+        <option th:each="opera : ${opere}" th:value="${opera.id}" th:text="${opera.titolo}"> 
+        </option>
+				
+			</select>
+		<span><button type="submit" class="pulsante">Conferma Collezione</button></span>
 	</form>
 	<div>
 		<ul>

@@ -46,4 +46,9 @@ public class OperaService {
 		else 
 			return false;
 	}
+
+	public List<Opera> findByTitolo(String titolo) {
+		List<Opera> optional = operaRepository.findByTitolo(titolo);
+	 return optional;
+	}
 }

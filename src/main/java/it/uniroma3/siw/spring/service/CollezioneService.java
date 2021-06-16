@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import it.uniroma3.siw.spring.model.Artista;
 import it.uniroma3.siw.spring.model. Collezione;
+import it.uniroma3.siw.spring.model.Opera;
 import it.uniroma3.siw.spring.repository.ArtistaRepository;
 import it.uniroma3.siw.spring.repository. CollezioneRepository;
 
@@ -37,6 +38,10 @@ public class CollezioneService {
 		else 
 			return null;
 	}
+	public void aggiungiOpera(final Collezione collezione, final List<Opera> opera) {
+        collezione.addOpera(opera);
+        this.collezioneRepository.save(collezione);
+    }
 
 	@Transactional
 	public boolean alreadyExists( Collezione  collezione) {

@@ -23,13 +23,15 @@ public class CollezioneController {
 
 	@Autowired
 	private CollezioneService collezioneService;
+	@Autowired
 	private OperaRepository operaRepository;
+	@Autowired
 	private OperaService operaService;
 
 	@RequestMapping(value="/admin/addCollezione", method = RequestMethod.GET)
 	public String addOpera(Model model) {
 		model.addAttribute("collezione", new Collezione());
-		model.getAttribute("opera");
+		 model.addAttribute("opere", this.operaService.tutti());
 	    return "collezioneForm";
 	}
 
@@ -46,13 +48,9 @@ public class CollezioneController {
     }
 	    
 	@RequestMapping(value = "/admin/collezione", method = RequestMethod.POST)
-	public String addCollezione(@ModelAttribute("collezione")Collezione collezione,
+	public String addCollezione(@ModelAttribute("collezione")Collezione collezione, @RequestParam("operaSelezionata") final String titolo,
 										Model model, BindingResult bindingResult) {
-		//this.collezioneValidator.validate(collezione, bindingResult);  
-	        //List<Opera> opera= operaRepository.findByTitolo(nome);
-	       // collezione.addOpera(opera);
-	        //for( Opera op : opera) 
-	        //op.setCollezioni(collezione);
+this.collezioneService.aggiungiOpera(collezione, this.operaService.findByTitolo(titolo));
 	        this.collezioneService.inserisci(collezione);
 	        model.addAttribute("collezione", this.collezioneService.tutti());
 	        return "collezione";

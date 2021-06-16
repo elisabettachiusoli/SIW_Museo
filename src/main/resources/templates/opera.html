@@ -19,11 +19,11 @@
 <body>
 	<section>
 	<div th:if="${opera}" th:object="${opera}" >
-		<img th:src="@{'image/' + '*{opera.titolo}' + '/' + *{opera.id} + '.jpg'}" width="700px" height="500px"
+		<img th:src="@{'image/' + '*{titolo}' + '/' + *{id} + '.jpg'}" width="700px" height="500px"
 			hspace="15px" vspace="15px" align="left" />
 		<section id="paragrafo">
 			<p>
-			<h1 class="titolo" th:if="${opera.titolo}">Notte stellata</h1>
+			<h1 class="titolo" th:if="${titolo}">Notte stellata</h1>
 			<div class="descr">
 				<a href="artista" class="descr"> Vincent van Gogh </a>, 1889
 			</div>
