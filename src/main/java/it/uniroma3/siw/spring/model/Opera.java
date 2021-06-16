@@ -22,7 +22,7 @@ import javax.persistence.OneToMany;
 public class Opera {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
 	@Column(nullable=false)
@@ -40,7 +40,6 @@ public class Opera {
 	@ManyToMany(mappedBy = "opere")
 	private List<Collezione> collezioni;
 	
-	//private String linkFoto; -->getter e setter
 	
 	public Opera() {
 		this.collezioni=new ArrayList<>();
