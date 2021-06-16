@@ -29,20 +29,18 @@
 				   th:href="@{'/artista' + '/' + ${artista.id}}" 
 				   th:text="${artista.nome} + ' ' + ${artista.cognome}" th:style="'color:black'"> Vincent van Gogh </a>
 			</div>
-			<p th:text="*{descrizione}">
+			<span th:text="*{descrizione}">
 			Nel 1888, prima dell'internamento a Saint-Rémy, van Gogh scrisse: </br></br>
 			"Con un quadro vorrei poter esprimere qualcosa di commovente come una musica. </br>Vorrei dipingere uomini e donne con un non so che di eterno, di cui un tempo era simbolo l’aureola, e che noi cerchiamo di rendere con lo stesso raggiare, con la vibrazione dei colori [...].</br> Ah il ritratto, il ritratto che mostri i pensieri, l’anima del modello: ecco cosa credo debba vedersi"
 			</br></br>
 			La Notte stellata, certamente una delle opere vangoghiane più celebri, risponde perfettamente a quest'esigenza. In questo dipinto, infatti, il pittore ha certamente cercato il contatto diretto con la realtà, dipingendo quello che si poteva vedere dalla finestra della sua stanza nel manicomio di Saint-Rémy. Van Gogh, tuttavia, non ha ripreso fedelmente questa veduta notturna, bensì l'ha manipolata con mezzi plastici, interiorizzandola fino allo spasimo e trasformandola in una potente visione onirica in cui poter fare affiorare le sue emozioni, le sue paure, i suoi viaggi dell'anima. La Notte stellata, pertanto, non offre all'osservatore un'immagine fedele della realtà, quanto una forma di «espressione» di quest'ultima.
-			</p>
+			</span>
 		</section>
 	</section>
 	</div>
 	
 	<div th:unless="${opera}">Non esiste questa opera</div>
-	<form th:action="@{'/admin/eliminaOpera' + '/' + ${id}}" method="POST">
-		<span><button type="submit" class="pulsante">Elimina Opera</button></span>
-	</form>
+
 	<footer th:replace="fragments/base.html :: fondo"></footer>
 </body>
 </html>

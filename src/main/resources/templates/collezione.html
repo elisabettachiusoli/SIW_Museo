@@ -31,11 +31,11 @@
             <h3 class="med-text"  th:text="${nome}">Galleria dell'arte impressionista e post-impressionista</h3>
             <h4 ><span th:each="curatore : ${curatori}" th:text="${curatore.nome} + ' ' + ${curatore.cognome}"></span></h4>
             <div class="testo">
-                <p th:text="${descrizione}" th:style="'color:black'">
+                <span th:text="${descrizione}" th:style="'color:black'">
                     Dal 16 giugno al <strong> Museo dell'arte impressionista </strong> apre la mostra <strong> Impressionisti e Post-impressionisti </strong>, prodotta e organizzata da <strong>Serena Bruni</strong>. </br> 
                     Per celebrare l'apertura del Museo saranno esposte oltre 50 opere dei <strong>più grandi maestri </strong>dell’impressionismo (Claude Monet, Edgar Degas, Edouard Manet, Pierre Auguste Renoir) e del post impressionismo ( Vincent van Gogh).
                     Opere provenienti da collezioni private raramente accessibili e concessi eccezionalmente per questa mostra.
-                </p>
+                </span>
             </div>
         </section>
 
@@ -55,9 +55,7 @@
     </div>
     
     <div th:unless="${collezione}">Non esiste questa collezione</div>
-    <form th:action="@{'/admin/eliminaCollezione' + '/' + ${id}}" method="POST">
-	</form>
-   
+
    <footer th:replace="fragments/base.html :: fondo"></footer>
 </body>
 </html>
