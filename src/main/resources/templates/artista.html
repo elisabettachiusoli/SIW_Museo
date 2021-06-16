@@ -53,7 +53,7 @@
         </div>
         <ul>
 			<li th:each="opera : ${opere}">
-			<img th:src="@{/image/notteStellata.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
+			<img th:src="@{{image}(image=${opera.file})}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
 				<a href="opera.html" 
 				   th:href="@{'/opera' + '/' + ${opera.id}}" 
 				   th:text="${opera.nome}">Notte stellata</a>

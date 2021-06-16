@@ -45,7 +45,6 @@ public class ArtistaController {
 	public String addProdotto(@ModelAttribute("artista") Artista artista, 
 			Model model, BindingResult bindingResult) {
 		this.artistaValidator.validate(artista, bindingResult);
-
 		this.artistaService.inserisci(artista);
 		model.addAttribute("artista", this.artistaService.tutti());
 		model.addAttribute("opere", artista.getOpere());

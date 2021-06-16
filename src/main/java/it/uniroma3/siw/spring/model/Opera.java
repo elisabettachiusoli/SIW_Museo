@@ -39,7 +39,7 @@ public class Opera {
 	
 	@ManyToMany(mappedBy = "opere")
 	private List<Collezione> collezioni;
-	
+	private String file;
 	
 	public Opera() {
 		this.collezioni=new ArrayList<>();
@@ -94,5 +94,13 @@ public class Opera {
 	
 	public void setCollezioni(Collezione collezione) {
 		this.collezioni.add(collezione);
+	}
+
+	public String getFile() {
+		return file;
+	}
+
+	public void setFile(String file) {
+		this.file = file;
 	}
 }
