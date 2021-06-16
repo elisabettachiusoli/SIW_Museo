@@ -1,6 +1,7 @@
 package it.uniroma3.siw.spring.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import it.uniroma3.siw.spring.model.Artista;
 import it.uniroma3.siw.spring.model.Collezione;
 import it.uniroma3.siw.spring.model.Opera;
 import it.uniroma3.siw.spring.repository.OperaRepository;
@@ -30,6 +33,8 @@ public class CollezioneController {
 	private OperaService operaService;
 	@Autowired
 	private CuratoreService curatoreService;
+	@Autowired
+	private CollezioneService artistaService;
 
 	@RequestMapping(value="/admin/addCollezione", method = RequestMethod.GET)
 	public String addOpera(Model model) {
@@ -41,7 +46,11 @@ public class CollezioneController {
 
 	@RequestMapping(value = "/collezione/{id}", method = RequestMethod.GET)
 	public String getArtista(@PathVariable("id") Long id, Model model) {
+		Collezione collezione=this.collezioneService.collezionePerId(id);
 		model.addAttribute("collezione", this.collezioneService.collezionePerId(id));
+		model.addAttribute("opere", operaService.tutti());
+		model.addAttribute("artisti", artistaService.tutti());
+		model.addAttribute("curatori",collezione.getCuratore());
 		return "collezione";
 	}
 
@@ -59,9 +68,9 @@ public class CollezioneController {
 		this.collezioneService.aggiungiOpera(collezione, this.operaService.findByTitolo(titoloOpera));
 		this.collezioneService.aggiungiCuratore(collezione, this.curatoreService.curatorePerId(idCuratore));
 		model.addAttribute("collezione", this.collezioneService.tutti());
-		model.addAttribute("opere", collezione.getOpere());
+		model.addAttribute("opere", operaService.tutti());
 		model.addAttribute("curatori",collezione.getCuratore());
-		return "collezione";
+		return "collezioni";
 
 	}
 	

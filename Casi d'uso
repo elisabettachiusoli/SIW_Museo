@@ -14,15 +14,15 @@ Caso d'uso UC3: Aggiungere una collezione – Attore primario: un Amministratore
 1. Un Amministratore vuole aggiungere una collezione al Sistema.
 2. L'Amministratore inserisce il suo username e la sua password. Il Sistema verifica la correttezza dei 
 dati immessi e autentica l'Amministratore. Il Sistema mostra l'elenco delle attività che l'Amministratore può svolgere.
-3. L'Amministratore sceglie l'attività 'inserisci una collezione'.
+3. L'Amministratore sceglie l'attività 'inserisci i dati di una collezione'.
 4. L'Amministratore inserisce nome e descrizione dell'opera, nonchè seleziona curatore e opera.
 5.  L'Amministratore conferma la sua volontà di creare una nuova collezione. Il Sistema registra la creazione e mostra l'elenco delle collezioni aggiornato. 
 8.  L'Amministratore può poi proseguire nell’uso del Sistema.
 
-Caso d'uso UC4: Rimuovere una collezione – Attore primario: un Amministratore.  
-1. Un Amministratore vuole aggiungere una collezione al Sistema.
+Caso d'uso UC4: Rimuovere un'opera – Attore primario: un Amministratore.  
+1. Un Amministratore vuole rimuovere un'opera al Sistema.
 2. L'Amministratore inserisce il suo username e la sua password. Il Sistema verifica la correttezza dei 
 dati immessi e autentica l'Amministratore. Il Sistema mostra l'elenco delle attività che l'Amministratore può svolgere.
-3. L'Amministratore sceglie l'attività 'rimuovi una collezione'. Il Sistema mostra l'elenco delle collezioni al momento presenti.
-4. L'Amministratore seleziona la collezione da rimuovere. Il Sistema registra l'avvenuta rimozione e mostra l'elenco delle collezioni aggiornato. 
+3. L'Amministratore sceglie l'attività 'elenco opere'. Il Sistema mostra l'elenco delle opere al momento presenti.
+4.L'Amministratore sceglie l'attività 'elimina opera'. Il Sistema registra l'avvenuta rimozione e mostra l'elenco delle collezioni aggiornato. 
 5.  L'Amministratore può poi proseguire nell’uso del Sistema.

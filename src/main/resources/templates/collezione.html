@@ -40,18 +40,15 @@
         </section>
 
         <div class="opera2">
-            <div class="img">
+           
+          <div class="descrizione" th:each="opera : ${opere}"  >
+          <a  href="opera.html" class="descr"
+				   th:href="@{'/opera' + '/' + ${opera.id}}" 
+				   th:text="${opera.titolo}" th:style="'color:white'" >Notte stellata sul Rodano</a>
+				    <div class="img">
                 <img th:src="@{/image/opera2.jpg}" width="500" height="400" hspace="15" vspace="15">
             </div>
-          <div class="descrizione"  th:each="opera : ${opere}" >
-          <a href="opera.html" 
-				   th:href="@{'/opera' + '/' + ${opera.id}}" 
-				   th:text="${opera.titolo}" th:style="'color:white'" class="descr">Notte stellata sul Rodano</a>
-             <a th:each="artista : ${artista}" href="artista.html" class="descr" th:href="{'/artista' + '/' + ${opera.artista.id}}" th:text="${opera.artista.nome} ${opera.artista.cognome}">Vincent van Gogh</a>
-                <div class="citazione">
-                    <p>"Io penso spesso che la notte sia più viva e più riccamente colorata del giorno."</p>
-                </div>
-            </div> -->
+           
             
         </div>
     
