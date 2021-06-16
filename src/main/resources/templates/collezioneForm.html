@@ -46,7 +46,6 @@
 		</div>
 	</form>
 	<div>
-		<h2>Curatori con id</h2>
 		<ul>
 			<li th:each="curatore: ${curatori}">
 				<p th:text="|${curatore.nome} ${curatore.cognome}: {curatore.id}|">Nome curatore</p>
