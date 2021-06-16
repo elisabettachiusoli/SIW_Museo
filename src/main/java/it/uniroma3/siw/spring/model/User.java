@@ -7,14 +7,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "users") // cambiamo nome perchè in postgres user e' una parola riservata
+@Table(name = "users")
 public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	
 	private String nome;
+	
 	private String cognome;
+	
+	public User() {
+		
+	}
 	
 	public Long getId() {
 		return id;
@@ -39,5 +45,4 @@ public class User {
 	public void setCognome(String cognome) {
 		this.cognome = cognome;
 	}
-
 }

@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,18 +19,25 @@ public class Curatore {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 
+	@Column(nullable=false)
 	private String nome;
 
+	@Column(nullable=false)
 	private String cognome;
 
+	@Column(nullable=false)
 	private int numeroDiTelefono;
 
+	@Column(nullable=false)
 	private String email;
 
+	@Column(nullable=false)
 	private LocalDate dataDiNascita;
 
+	@Column(nullable=false)
 	private String luogoDiNascita;
 
+	@Column(nullable=false)
 	private int matricola;
 	
 	@OneToMany(mappedBy="curatore")

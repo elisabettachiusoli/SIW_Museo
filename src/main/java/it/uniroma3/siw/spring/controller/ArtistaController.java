@@ -34,18 +34,18 @@ public class ArtistaController {
     	return "artista";
     }
 	
-	  @RequestMapping(value = "/artisti", method = RequestMethod.GET)
-	    public String getArtisti(Model model) {
-	    		model.addAttribute("artista", this.artistaService.tutti());
-	    		return "artisti";
-	    }
+	@RequestMapping(value = "/artisti", method = RequestMethod.GET)
+    public String getArtisti(Model model) {
+    		model.addAttribute("artista", this.artistaService.tutti());
+    		return "artisti";
+    }
 	    
-	    @RequestMapping(value = "/admin/artista", method = RequestMethod.POST)
-	    public String addProdotto(@ModelAttribute("artista") Artista artista, 
-	    									Model model, BindingResult bindingResult) {
-	    	this.artistaValidator.validate(artista, bindingResult);
-	        	this.artistaService.inserisci(artista);
-	            model.addAttribute("artista", this.artistaService.tutti());
-	            return "artisti";
-	    }
+    @RequestMapping(value = "/admin/artista", method = RequestMethod.POST)
+    public String addProdotto(@ModelAttribute("artista") Artista artista, 
+    									Model model, BindingResult bindingResult) {
+    	this.artistaValidator.validate(artista, bindingResult);
+        	this.artistaService.inserisci(artista);
+            model.addAttribute("artista", this.artistaService.tutti());
+            return "artisti";
+    }
 }

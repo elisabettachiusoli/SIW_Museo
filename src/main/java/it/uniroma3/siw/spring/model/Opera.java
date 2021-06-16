@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,8 +18,6 @@ import javax.persistence.OneToMany;
 //import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.web.multipart.MultipartFile;
 
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 public class Opera {
@@ -26,24 +26,22 @@ public class Opera {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
-	@Getter
-	@Setter
+	@Column(nullable=false)
 	private String titolo;
 	
-	@Getter
-	@Setter
+	@Column(nullable=false)
 	private int anno;
 	
-	@Getter
-	@Setter
+	@Column(nullable=false, length=3000)
 	private String descrizione;
 	
 	@ManyToOne
 	private Artista artista;
 	
-	
 	@OneToMany
 	private List<Collezione> collezioni;
+	
+	//private String linkFoto; -->getter e setter
 	
 	public Opera() {
 		this.collezioni=new ArrayList<>();
@@ -52,35 +50,44 @@ public class Opera {
 	public Long getId() {
 		return this.id;
 	}
+	
 	public String getTitolo() {
 		return this.titolo;
 	}
+	
 	public void setTitolo(String titolo) {
 		this.titolo=titolo;
 	}
+	
 	public int getAnno() {
 		return this.anno;
 	}
+	
 	public void setAnno(int anno) {
 		this.anno=anno;
 	}
+	
 	public String getDescrizione() {
 		return this.descrizione;
 	}
+	
 	public void setDescrizione(String descrizione) {
 		this.descrizione=descrizione;
 	}
+	
 	public Artista getArtista() {
 		return this.artista;
 	}
+	
 	public void setArtista(Artista artista) {
 		this.artista=artista;
 	}
+	
 	public List<Collezione> getCollezioni() {
 		return this.collezioni;
 	}
+	
 	public void setCollezioni(Collezione collezione) {
 		this.collezioni.add(collezione);
 	}
-	
 }
