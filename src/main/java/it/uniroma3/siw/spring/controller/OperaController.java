@@ -2,6 +2,8 @@ package it.uniroma3.siw.spring.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -11,8 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import it.uniroma3.siw.spring.controller.validator.OperaValidator;
+import it.uniroma3.siw.spring.model.Credentials;
 import it.uniroma3.siw.spring.model.Opera;
 import it.uniroma3.siw.spring.service.ArtistaService;
+import it.uniroma3.siw.spring.service.CredentialsService;
 import it.uniroma3.siw.spring.service.OperaService;
 
 @Controller
@@ -24,6 +28,8 @@ public class OperaController {
 
 	@Autowired
 	private OperaValidator operaValidator;
+	@Autowired
+	private CredentialsService credentialsService;
 
 
 	@RequestMapping(value="/admin/addOpera", method = RequestMethod.GET)
@@ -35,9 +41,14 @@ public class OperaController {
 
 	@RequestMapping(value = "/opera/{id}", method = RequestMethod.GET)
 	public String getArtista(@PathVariable("id") Long id, Model model) {
+		UserDetails userDetails = (UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+    	Credentials credentials = credentialsService.getCredentials(userDetails.getUsername());
 		model.addAttribute("opera", this.operaService.operaPerId(id));
 		model.addAttribute("artisti", this.operaService.operaPerId(id).getArtista());
-		return "opera";
+		if (credentials.getRole().equals(Credentials.ADMIN_ROLE)) {
+            return "admin/opera";
+        }
+        return "opera";
 	}
 
 	@RequestMapping(value = "/opere", method = RequestMethod.GET)
