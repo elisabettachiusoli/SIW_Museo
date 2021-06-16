@@ -58,10 +58,12 @@ public String getArtista(@PathVariable("id") Long id, Model model) {
     public String addArtista(@ModelAttribute("opera") Opera opera, @RequestParam("artistaSelezionato") final Long idArtista,
     									Model model, BindingResult bindingResult) {
     	this.operaValidator.validate(opera, bindingResult);
+    	 if(! bindingResult.hasErrors()) {
         	this.operaService.inserisci(opera);
 this.operaService.aggiungiArtista(opera, this.artistaService.artistaPerId(idArtista));
             model.addAttribute("opera", this.operaService.tutti());
             model.addAttribute("artisti", opera.getArtista());
+    	 }
             return "opere";
     }
 
