@@ -23,11 +23,11 @@
 			hspace="15px" vspace="15px" align="left" /> 
 		<section id="paragrafo">
 			<p>
-			<h1 class="titolo" th:if="${titolo}">Notte stellata</h1>
+			<h1 class="titolo" th:if="${titolo}">Notte stellata</h1> <div th:text="*{anno}"> 1889 </div>
 			<div class="descr">
 				<a th:each="artista : ${artisti}" href="artista.html" 
 				   th:href="@{'/artista' + '/' + ${artista.id}}" 
-				   th:text="${artista.nome} + ' ' + ${artista.cognome}" th:style="'color:black'"> Vincent van Gogh </a>, 1889
+				   th:text="${artista.nome} + ' ' + ${artista.cognome}" th:style="'color:black'"> Vincent van Gogh </a>
 			</div>
 			<p th:text="*{descrizione}">
 			Nel 1888, prima dell'internamento a Saint-Rémy, van Gogh scrisse: </br></br>
