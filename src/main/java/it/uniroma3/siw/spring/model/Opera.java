@@ -16,8 +16,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-//import org.springframework.mock.web.MockMultipartFile;
-import org.springframework.web.multipart.MultipartFile;
 
 
 @Entity
@@ -39,12 +37,7 @@ public class Opera {
 	@ManyToOne
 	private Artista artista;
 	
-<<<<<<< Updated upstream
-	@OneToMany
-=======
-	
 	@ManyToMany(mappedBy = "opere")
->>>>>>> Stashed changes
 	private List<Collezione> collezioni;
 	
 	//private String linkFoto; -->getter e setter
@@ -58,6 +51,13 @@ public class Opera {
 	}
 	
 	public String getTitolo() {
+		return this.titolo;
+	}
+	
+	public void setNome(String nome) {
+		this.titolo=nome;
+	}
+	public String getNome() {
 		return this.titolo;
 	}
 	

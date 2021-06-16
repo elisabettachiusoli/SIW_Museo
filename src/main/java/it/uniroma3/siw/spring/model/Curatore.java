@@ -22,7 +22,6 @@ public class Curatore {
 	@Column(nullable=false)
 	private String nome;
 
-	@Column(nullable=false)
 	private String cognome;
 
 	@Column(nullable=false)

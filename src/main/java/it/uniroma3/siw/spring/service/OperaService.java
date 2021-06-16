@@ -17,7 +17,9 @@ import it.uniroma3.siw.spring.repository.OperaRepository;
 public class OperaService {
 
 	@Autowired
-	private OperaRepository operaRepository; 
+	private OperaRepository operaRepository;
+	@Autowired
+	private ArtistaRepository artistaRepository; 
 	
 	@Transactional
 	public Opera inserisci(Opera opera) {
@@ -50,5 +52,12 @@ public class OperaService {
 	public List<Opera> findByTitolo(String titolo) {
 		List<Opera> optional = operaRepository.findByTitolo(titolo);
 	 return optional;
+	}
+
+	public void aggiungiArtista(Opera opera, Artista artista) {
+		opera.setArtista(artista);
+		artista.setOpera(opera);
+        this.operaRepository.save(opera);
+        this.artistaRepository.save(artista);
 	}
 }

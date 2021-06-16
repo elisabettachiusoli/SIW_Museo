@@ -19,17 +19,10 @@
 <body>
     <header th:replace="fragments/base.html :: intestazione"></header>
     <ul class="push">
-			<li th:each="collezione : ${collezione}">
+			<li th:each="collezione : ${collezione}" th:style="'color:black'">
 				<a href="collezione.html" 
 				   th:href="@{'/collezione' + '/' + ${collezione.id}}" 
-				   th:text="${collezione.nome} ':'" th:style="'color:black'"> Collezioni</a>
-				   <div th:each="collezione.artisti : ${artista}">
-				   <span th:text="${artista.nome} ':'" th:style="'color:black'">  Artisti</span>
-				   <div th:each="artista.opere : ${opera}">
-				   <img th:src="@{image/opera3.jpg}">
-				   <span th:text="${opera.nome} ':'" th:style="'color:black'">  Opere</span>
-				   </div>
-				   </div>
+				   th:text="${collezione.nome}" th:style="'color:black'"> Collezioni</a>
 			</li>
 		</ul>
 		 <footer th:replace="fragments/base.html :: fondo"></footer>

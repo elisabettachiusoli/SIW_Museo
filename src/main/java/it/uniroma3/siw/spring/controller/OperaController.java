@@ -37,12 +37,14 @@ private FileUploadService fileService;
 @RequestMapping(value="/admin/addOpera", method = RequestMethod.GET)
 public String addOpera(Model model) {
 	model.addAttribute("opera", new Opera());
+	model.addAttribute("artisti", this.artistaService.tutti());
     return "operaForm";
 }
 
 @RequestMapping(value = "/opera/{id}", method = RequestMethod.GET)
 public String getArtista(@PathVariable("id") Long id, Model model) {
 	model.addAttribute("opera", this.operaService.operaPerId(id));
+	model.addAttribute("artisti", this.operaService.operaPerId(id).getArtista());
 	return "opera";
 }
 
@@ -53,14 +55,13 @@ public String getArtista(@PathVariable("id") Long id, Model model) {
     }
     
     @RequestMapping(value = "/admin/opera", method = RequestMethod.POST)
-    public String addArtista(@ModelAttribute("opera") Opera opera, Artista artista,
+    public String addArtista(@ModelAttribute("opera") Opera opera, @RequestParam("artistaSelezionato") final Long idArtista,
     									Model model, BindingResult bindingResult) {
     	this.operaValidator.validate(opera, bindingResult);
         	this.operaService.inserisci(opera);
-     //   	this.fileService.uploadFile(file, opera.getTitolo(), opera.getId());
+this.operaService.aggiungiArtista(opera, this.artistaService.artistaPerId(idArtista));
             model.addAttribute("opera", this.operaService.tutti());
-            //for (Artista artisti:  this.artistaService.artistaPerNome(artista.getNome())) {
-            //opera.setArtista(artisti); }
+            model.addAttribute("artisti", opera.getArtista());
             return "opere";
     }
 

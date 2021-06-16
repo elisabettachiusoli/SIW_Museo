@@ -2,6 +2,7 @@ package it.uniroma3.siw.spring.model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -25,12 +26,12 @@ public class Artista {
 	private String cognome;
 
 	@Column(nullable=false)
-	private LocalDate dataDiNascita;
+	private String dataDiNascita;
 
 	@Column(nullable=false)
 	private String luogoDiNascita;
 
-	private LocalDate dataDiMorte;
+	private String dataDiMorte;
 	
 	private String luogoDiMorte;
 
@@ -39,6 +40,7 @@ public class Artista {
 	
 	@Column(nullable=false)
 	private String nazionalita;
+	private String citazione;
 	
 	@OneToMany(mappedBy="artista")
 	private List<Opera> opere;
@@ -83,19 +85,19 @@ public class Artista {
 		this.luogoDiMorte=luogoDiMorte;
 	}
 	
-	public LocalDate getDataDiNascita() {
+	public String getDataDiNascita() {
 		return this.dataDiNascita;
 	}
 	
-	public void setDataDiNascita(LocalDate dataDiNascita) {
+	public void setDataDiNascita(String dataDiNascita) {
 		this.dataDiNascita=dataDiNascita;
 	}
 	
-	public LocalDate getDataDiMorte() {
+	public String getDataDiMorte() {
 		return this.dataDiMorte;
 	}
 	
-	public void setDataDiMorte(LocalDate dataDiMorte) {
+	public void setDataDiMorte(String dataDiMorte) {
 		this.dataDiMorte=dataDiMorte;
 	}
 	
@@ -122,7 +124,13 @@ public class Artista {
 	public void setDescrizione(String descrizione) {
 		this.descrizione=descrizione;
 	}
+	public String getCitazione() {
+		return this.citazione;
+	}
 	
+	public void setCitazione(String citazione) {
+		this.citazione=citazione;
+	}
 	public void setId(Long id) {
 		this.id = id;
 	}

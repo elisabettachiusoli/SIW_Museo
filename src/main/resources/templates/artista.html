@@ -51,9 +51,8 @@
             <h2>OPERE</h2>
             <h2 class="primo"></h2>
         </div>
-        <div th:if="${opera}" th:object="${opera}">
         <ul>
-			<li th:each="artista.opere : ${opere}">
+			<li th:each="opera : ${opere}">
 			<img th:src="@{/image/notteStellata.jpg}" width="300px" height="200px" hspace="15px" vspace="15px" /> 
 				<a href="opera.html" 
 				   th:href="@{'/opera' + '/' + ${opera.id}}" 
@@ -61,7 +60,7 @@
 			</li>
 		</ul>
         </div>
-    <div th:unless="${opera}">Questa opera non esiste</div>
+    <div th:unless="${opere}">Questa opera non esiste</div>
     </section>
 </div>
     	<div th:unless="${artista}" th:style="'color:white'">Questo artista non esiste</div>

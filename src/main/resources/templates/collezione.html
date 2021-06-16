@@ -28,10 +28,10 @@
         </section>
         
         <section id="descrizione">
-            <h3 class="med-text" th:text="|${collezione.nome}|">Galleria dell'arte impressionista e post-impressionista</h3>
-            <h4><span th:text="|*{curatore.nome} *{curatore.cognome}|">a cura di Serena Bruni</span></h4>
+            <h3 class="med-text"  th:text="${nome}">Galleria dell'arte impressionista e post-impressionista</h3>
+            <h4 ><span th:each="curatore : ${curatori}" th:text="${curatore.nome} + ' ' + ${curatore.cognome}"></span></h4>
             <div class="testo">
-                <p th:text="|*{descrizione}|">
+                <p th:text="${descrizione}">
                     Dal 16 giugno al <strong> Museo dell'arte impressionista </strong> apre la mostra <strong> Impressionisti e Post-impressionisti </strong>, prodotta e organizzata da <strong>Serena Bruni</strong>. </br> 
                     Per celebrare l'apertura del Museo saranno esposte oltre 50 opere dei <strong>più grandi maestri </strong>dell’impressionismo (Claude Monet, Edgar Degas, Edouard Manet, Pierre Auguste Renoir) e del post impressionismo ( Vincent van Gogh).
                     Opere provenienti da collezioni private raramente accessibili e concessi eccezionalmente per questa mostra.
@@ -39,56 +39,20 @@
             </div>
         </section>
 
-        <div class="opera1">
-            <div class="img">
-                <img th:src="@{/image/opera1.jpg}" width="500" height="400" hspace="15" vspace="15">
-            </div>
-            <div class="descrizione">
-                <a href="opera" class="descr">Ninfee</a>
-                <a href="artista" class="descr">Claude Monet</a>
-                <div class="citazione">
-                    <p>"Mi ci e' voluto molto tempo per capire le mie ninfee. Le avevo piantate per il gusto di piantarle, e le ho coltivate senza pensare di ritrarle... <br />Non si assorbe un paesaggio in un solo giorno... E poi, all'improvviso, ho avuto la rivelazione dalle fate del mio stagno. Ho preso la mia tavolozza. <br />Da allora, non ho avuto altri modelli."</p>
-                </div>
-            </div>
-        </div>
-
         <div class="opera2">
             <div class="img">
                 <img th:src="@{/image/opera2.jpg}" width="500" height="400" hspace="15" vspace="15">
             </div>
-            <div class="descrizione">
-                <a href="opera" class="descr" th:href="{'/opera' + '/' + ${opera.id}}" th:text="|${opera.titolo}|">Notte stellata sul Rodano</a>
-                <a href="artista" class="descr" th:href="{'/artista' + '/' + ${opera.artista.id}}" th:text="|${opera.artista.nome} ${opera.artista.cognome}|">Vincent van Gogh</a>
+          <div class="descrizione"  th:each="opera : ${opere}" >
+          <a href="opera.html" 
+				   th:href="@{'/opera' + '/' + ${opera.id}}" 
+				   th:text="${opera.titolo}" th:style="'color:white'" class="descr">Notte stellata sul Rodano</a>
+             <a th:each="artista : ${artista}" href="artista.html" class="descr" th:href="{'/artista' + '/' + ${opera.artista.id}}" th:text="${opera.artista.nome} ${opera.artista.cognome}">Vincent van Gogh</a>
                 <div class="citazione">
                     <p>"Io penso spesso che la notte sia più viva e più riccamente colorata del giorno."</p>
                 </div>
-            </div>
-        </div>
-
-        <div class="opera3">
-            <div class="img">
-                <img th:src="@{/image/opera3.jpg}" width="500" height="400" hspace="15" vspace="15">
-            </div>
-            <div class="descrizione">
-                <a href="opera" class="descr">Bal au moulin de la Galette</a>
-                <a href="artista" class="descr">Pierre-Auguste Renoir</a>
-                <div class="citazione">
-                    <p>"Per me, un dipinto deve essere una cosa amabile, allegra e bella, sì, bella. <br />Ci sono già abbastanza cose noiose nella vita senza che ci si metta a fabbricarne altre. So bene che è difficile far ammettere che un dipinto possa appartenere alla grandissima pittura pur rimanendo allegro.<br /> La gente che ride non viene mai presa sul serio."</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="opera4">
-            <div class="img">
-                <img th:src="@{/image/opera4.jpg}" width="500" height="400" hspace="15" vspace="15">
-            </div>
-            <div class="descrizione">
-                <a href="opera" class="descr">La lezione di danza</a>
-                <a href="artista" class="descr">Edgar Degas</a>
-                <div class="citazione">
-                    <p>"Perche' dipingo la danza? E' il movimento della gente e delle cose che ci consola. <br />Se le foglie degli alberi non si muovessero, gli alberi sarebbero infinitamente tristi e la loro tristezza sarebbe la nostra."</p>
-                </div>
-            </div>
+            </div> -->
+            
         </div>
     </div>
     

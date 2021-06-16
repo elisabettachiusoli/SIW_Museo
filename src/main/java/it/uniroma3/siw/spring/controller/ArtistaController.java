@@ -31,6 +31,7 @@ public class ArtistaController {
 	@RequestMapping(value = "/artista/{id}", method = RequestMethod.GET)
     public String getArtista(@PathVariable("id") Long id, Model model) {
     	model.addAttribute("artista", this.artistaService.artistaPerId(id));
+    	model.addAttribute("opere", this.artistaService.artistaPerId(id).getOpere());
     	return "artista";
     }
 	
@@ -46,6 +47,7 @@ public class ArtistaController {
     	this.artistaValidator.validate(artista, bindingResult);
         	this.artistaService.inserisci(artista);
             model.addAttribute("artista", this.artistaService.tutti());
+            model.addAttribute("opere", artista.getOpere());
             return "artisti";
     }
 }

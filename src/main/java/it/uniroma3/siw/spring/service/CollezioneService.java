@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import it.uniroma3.siw.spring.model.Artista;
 import it.uniroma3.siw.spring.model. Collezione;
+import it.uniroma3.siw.spring.model.Curatore;
 import it.uniroma3.siw.spring.model.Opera;
 import it.uniroma3.siw.spring.repository.ArtistaRepository;
 import it.uniroma3.siw.spring.repository. CollezioneRepository;
@@ -50,5 +51,11 @@ public class CollezioneService {
 			return true;
 		else 
 			return false;
+	}
+
+	public void aggiungiCuratore(Collezione collezione, Curatore curatore) {
+		collezione.setCuratore(curatore);
+        this.collezioneRepository.save(collezione);
+		
 	}
 }

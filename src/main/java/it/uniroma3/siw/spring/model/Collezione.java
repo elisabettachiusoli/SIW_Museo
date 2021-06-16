@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -34,7 +35,7 @@ public class Collezione {
 	@ManyToOne
 	private Museo museo;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.MERGE)
 	private Curatore curatore;
 	
 	public Collezione() {

@@ -36,11 +36,15 @@
 			<div>
 				<label>Descrizione:</label>
 				<span><input type="text" th:field="*{descrizione}" /></span>
-			
-			<!-- <div>
-				<label>Nome Artista:</label>
-				<span><input type="text" th:field="*{artista.nome}" /></span>
-			</div> -->
+			</div>	
+			<div>
+			<label>Artista:</label>
+			</select>
+			<select name="artistaSelezionato" >
+        <option th:each="artista : ${artisti}" th:value="${artista.id}" th:text="${artista.nome} + ' ' + ${artista.cognome} "> 
+        </option>
+			</select>
+			</div>
 			<div>
 				<span><button type="submit" class="pulsante">Conferma Opera</button></span>
 			</div>

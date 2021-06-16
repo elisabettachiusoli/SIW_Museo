@@ -32,26 +32,25 @@
 			<div>
 				<label>Descrizione:</label>
 				<span><input type="text" th:field="*{descrizione}" /></span>
-			</div>
+			</div>	
 			<div>
-				<label>Curatore id:</label>
-				<span><input type="text" th:field="*{curatore.id}" /></span>
-			</div>		
 			<label>Seleziona opera:</label>
 			<select name="operaSelezionata" >
         <option th:each="opera : ${opere}" th:value="${opera.id}" th:text="${opera.titolo}"> 
         </option>
+			</select>
+			</div>
+				<div>
+				<label>Seleziona curatore:</label>
+			<select name="curatoreSelezionato" >
+        <option th:each="curatore : ${curatori}" th:value="${curatore.id}" th:text="${curatore.nome} + ' ' + ${curatore.cognome} "> 
+        </option>
 				
 			</select>
+		</div>
 		<span><button type="submit" class="pulsante">Conferma Collezione</button></span>
 	</form>
-	<div>
-		<ul>
-			<li th:each="curatore: ${curatori}">
-				<p th:text="|${curatore.nome} ${curatore.cognome}: {curatore.id}|">Nome curatore</p>
-			</li>
-		</ul>
-	</div>	
+
 	<footer></footer>
 </body>
 </html>

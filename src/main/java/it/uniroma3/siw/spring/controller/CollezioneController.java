@@ -16,6 +16,7 @@ import it.uniroma3.siw.spring.model.Collezione;
 import it.uniroma3.siw.spring.model.Opera;
 import it.uniroma3.siw.spring.repository.OperaRepository;
 import it.uniroma3.siw.spring.service.CollezioneService;
+import it.uniroma3.siw.spring.service.CuratoreService;
 import it.uniroma3.siw.spring.service.OperaService;
 
 @Controller
@@ -27,11 +28,14 @@ public class CollezioneController {
 	private OperaRepository operaRepository;
 	@Autowired
 	private OperaService operaService;
+	@Autowired
+	private CuratoreService curatoreService;
 
 	@RequestMapping(value="/admin/addCollezione", method = RequestMethod.GET)
 	public String addOpera(Model model) {
 		model.addAttribute("collezione", new Collezione());
 		 model.addAttribute("opere", this.operaService.tutti());
+		 model.addAttribute("curatori",curatoreService.tutti());
 	    return "collezioneForm";
 	}
 
@@ -48,11 +52,15 @@ public class CollezioneController {
     }
 	    
 	@RequestMapping(value = "/admin/collezione", method = RequestMethod.POST)
-	public String addCollezione(@ModelAttribute("collezione")Collezione collezione, @RequestParam("operaSelezionata") final String titolo,
+	public String addCollezione(@ModelAttribute("collezione")Collezione collezione, @RequestParam("operaSelezionata") final String titoloOpera,
+		                           	@RequestParam("curatoreSelezionato") final Long idCuratore,
 										Model model, BindingResult bindingResult) {
-this.collezioneService.aggiungiOpera(collezione, this.operaService.findByTitolo(titolo));
-	        this.collezioneService.inserisci(collezione);
+		 this.collezioneService.inserisci(collezione);
+this.collezioneService.aggiungiOpera(collezione, this.operaService.findByTitolo(titoloOpera));
+this.collezioneService.aggiungiCuratore(collezione, this.curatoreService.curatorePerId(idCuratore));
 	        model.addAttribute("collezione", this.collezioneService.tutti());
+	        model.addAttribute("opere", collezione.getOpere());
+			 model.addAttribute("curatori",collezione.getCuratore());
 	        return "collezione";
 	
 	}
