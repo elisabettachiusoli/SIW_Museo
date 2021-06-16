@@ -24,47 +24,53 @@ import it.uniroma3.siw.spring.service.OperaService;
 
 @Controller
 public class OperaController {
-@Autowired
-private ArtistaService artistaService;
-@Autowired
-private OperaService operaService;
+	@Autowired
+	private ArtistaService artistaService;
+	@Autowired
+	private OperaService operaService;
 
-@Autowired
-private OperaValidator operaValidator;
-@Autowired
-private FileUploadService fileService;
+	@Autowired
+	private OperaValidator operaValidator;
+	@Autowired
+	private FileUploadService fileService;
 
-@RequestMapping(value="/admin/addOpera", method = RequestMethod.GET)
-public String addOpera(Model model) {
-	model.addAttribute("opera", new Opera());
-	model.addAttribute("artisti", this.artistaService.tutti());
-    return "operaForm";
-}
+	@RequestMapping(value="/admin/addOpera", method = RequestMethod.GET)
+	public String addOpera(Model model) {
+		model.addAttribute("opera", new Opera());
+		model.addAttribute("artisti", this.artistaService.tutti());
+		return "operaForm";
+	}
 
-@RequestMapping(value = "/opera/{id}", method = RequestMethod.GET)
-public String getArtista(@PathVariable("id") Long id, Model model) {
-	model.addAttribute("opera", this.operaService.operaPerId(id));
-	model.addAttribute("artisti", this.operaService.operaPerId(id).getArtista());
-	return "opera";
-}
+	@RequestMapping(value = "/opera/{id}", method = RequestMethod.GET)
+	public String getArtista(@PathVariable("id") Long id, Model model) {
+		model.addAttribute("opera", this.operaService.operaPerId(id));
+		model.addAttribute("artisti", this.operaService.operaPerId(id).getArtista());
+		return "opera";
+	}
 
-  @RequestMapping(value = "/opere", method = RequestMethod.GET)
-    public String getArtisti(Model model) {
-    		model.addAttribute("opera", this.operaService.tutti());
-    		return "opere";
-    }
-    
-    @RequestMapping(value = "/admin/opera", method = RequestMethod.POST)
-    public String addArtista(@ModelAttribute("opera") Opera opera, @RequestParam("artistaSelezionato") final Long idArtista,
-    									Model model, BindingResult bindingResult) {
-    	this.operaValidator.validate(opera, bindingResult);
-    	 if(! bindingResult.hasErrors()) {
-        	this.operaService.inserisci(opera);
-this.operaService.aggiungiArtista(opera, this.artistaService.artistaPerId(idArtista));
-            model.addAttribute("opera", this.operaService.tutti());
-            model.addAttribute("artisti", opera.getArtista());
-    	 }
-            return "opere";
-    }
+	@RequestMapping(value = "/opere", method = RequestMethod.GET)
+	public String getArtisti(Model model) {
+		model.addAttribute("opera", this.operaService.tutti());
+		return "opere";
+	}
+
+	@RequestMapping(value = "/admin/opera", method = RequestMethod.POST)
+	public String addArtista(@ModelAttribute("opera") Opera opera, @RequestParam("artistaSelezionato") final Long idArtista,
+			Model model, BindingResult bindingResult) {
+		this.operaValidator.validate(opera, bindingResult);
+		this.operaService.inserisci(opera);
+		this.operaService.aggiungiArtista(opera, this.artistaService.artistaPerId(idArtista));
+		model.addAttribute("opera", this.operaService.tutti());
+		model.addAttribute("artisti", opera.getArtista());
+		return "opere";
+	}
+
+	@RequestMapping(value="/admin/eliminaOpera/{id}", method=RequestMethod.POST)
+	public String eliminaOpera(Model model, @PathVariable("id") Long idOpera) {
+		Opera opera = operaService.operaPerId(idOpera);
+		operaService.eliminaOpera(opera);
+		model.addAttribute("opera", this.operaService.tutti());
+		return "opere";
+	}
 
 }

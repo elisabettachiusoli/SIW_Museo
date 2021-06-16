@@ -64,4 +64,12 @@ public class CollezioneController {
 		return "collezione";
 
 	}
+	
+	@RequestMapping(value="/admin/eliminaCollezione/{id}", method=RequestMethod.POST)
+	public String eliminaCollezione(Model model, @PathVariable("id") Long idCollezione) {
+		Collezione collezione = collezioneService.collezionePerId(idCollezione);
+		collezioneService.eliminaCollezione(collezione);
+		model.addAttribute("collezione", this.operaService.tutti());
+		return "opere";
+	}
 }

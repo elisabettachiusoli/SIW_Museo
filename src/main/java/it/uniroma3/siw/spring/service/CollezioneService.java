@@ -58,4 +58,10 @@ public class CollezioneService {
         this.collezioneRepository.save(collezione);
 		
 	}
+	
+	@Transactional
+	public void eliminaCollezione(Collezione collezione) {
+		collezioneRepository.delete(collezione);
+		
+	}
 }
