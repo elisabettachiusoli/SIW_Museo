@@ -79,7 +79,7 @@ public class Inizializzazione implements ApplicationListener<ContextRefreshedEve
 		Collezione collezione1 = new Collezione();
 		collezione1.setCuratore(curatore1);
 		collezione1.setNome("Galleria dell'arte impressionista e post-impressionista");
-		collezione1.setDescrizione("Dal 16 giugno al <strong> Museo dell'arte impressionista apre la mostra Impressionisti e Post-impressionisti, prodotta e organizzata da Serena Bruni. \r\n"
+		collezione1.setDescrizione("Dal 16 giugno al Museo dell'arte impressionista apre la mostra Impressionisti e Post-impressionisti, prodotta e organizzata da Serena Bruni. \r\n"
 									+ "Per celebrare l'apertura del Museo saranno esposte oltre 50 opere dei più grandi maestri dell’impressionismo (Claude Monet, Edgar Degas, Edouard Manet, Pierre Auguste Renoir) e del post impressionismo ( Vincent van Gogh).\r\n"
 									+ "Opere provenienti da collezioni private raramente accessibili e concessi eccezionalmente per questa mostra.");
 		collezioneService.inserisci(collezione1);
@@ -113,9 +113,9 @@ public class Inizializzazione implements ApplicationListener<ContextRefreshedEve
 		opera1.setAnno(1889);
 		opera1.setCollezioni(collezione1);
 		opera1.setDescrizione("Nel 1888, prima dell'internamento a Saint-Rémy, van Gogh scrisse: \r\n"
-				+ "Con un quadro vorrei poter esprimere qualcosa di commovente come una musica. Vorrei dipingere uomini e donne con un non so che di eterno, di cui un tempo era simbolo l’aureola, e che noi cerchiamo di rendere con lo stesso raggiare, con la vibrazione dei colori [...].Ah il ritratto, il ritratto che mostri i pensieri, l’anima del modello: ecco cosa credo debba vedersi\"\r\n"
-				+ "\r\n"
-				+ "La Notte stellata, certamente una delle opere vangoghiane più celebri, risponde perfettamente a quest'esigenza. In questo dipinto, infatti, il pittore ha certamente cercato il contatto diretto con la realtà, dipingendo quello che si poteva vedere dalla finestra della sua stanza nel manicomio di Saint-Rémy. Van Gogh, tuttavia, non ha ripreso fedelmente questa veduta notturna, bensì l'ha manipolata con mezzi plastici, interiorizzandola fino allo spasimo e trasformandola in una potente visione onirica in cui poter fare affiorare le sue emozioni, le sue paure, i suoi viaggi dell'anima. La Notte stellata, pertanto, non offre all'osservatore un'immagine fedele della realtà, quanto una forma di «espressione» di quest'ultima.");
+								+ "Con un quadro vorrei poter esprimere qualcosa di commovente come una musica. Vorrei dipingere uomini e donne con un non so che di eterno, di cui un tempo era simbolo l’aureola, e che noi cerchiamo di rendere con lo stesso raggiare, con la vibrazione dei colori [...].Ah il ritratto, il ritratto che mostri i pensieri, l’anima del modello: ecco cosa credo debba vedersi\"\r\n"
+								+ "\r\n"
+								+ "La Notte stellata, certamente una delle opere vangoghiane più celebri, risponde perfettamente a quest'esigenza. In questo dipinto, infatti, il pittore ha certamente cercato il contatto diretto con la realtà, dipingendo quello che si poteva vedere dalla finestra della sua stanza nel manicomio di Saint-Rémy. Van Gogh, tuttavia, non ha ripreso fedelmente questa veduta notturna, bensì l'ha manipolata con mezzi plastici, interiorizzandola fino allo spasimo e trasformandola in una potente visione onirica in cui poter fare affiorare le sue emozioni, le sue paure, i suoi viaggi dell'anima. La Notte stellata, pertanto, non offre all'osservatore un'immagine fedele della realtà, quanto una forma di «espressione» di quest'ultima.");
 		opera1.setFile("https://www.milanoplatinum.com/wp-content/uploads/2016/12/Vincent-van-Gogh-Notte-stellata.jpg");
 		operaService.inserisci(opera1);
 	}
