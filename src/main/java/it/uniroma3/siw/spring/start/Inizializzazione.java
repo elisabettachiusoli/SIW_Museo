@@ -52,7 +52,7 @@ public class Inizializzazione implements ApplicationListener<ContextRefreshedEve
 		credentials1.setRole("ADMIN");
 		credentials1.setPassword("admin");
 		credentials1.setUser(user1);
-		credentialService.saveCredentials(credentials1);
+		credentialService.saveCredentials2(credentials1);
 		
 		User user2 = new User();
 		user2.setNome("user2");
@@ -64,7 +64,7 @@ public class Inizializzazione implements ApplicationListener<ContextRefreshedEve
 		credentials2.setPassword("default");
 		credentials2.setRole("DEFAULT");
 		credentials2.setUser(user2);
-		credentialService.saveCredentials(credentials2);
+		credentialService.saveCredentials2(credentials2);
 		
 		Curatore curatore1=new Curatore();
 		curatore1.setNome("Serena");
