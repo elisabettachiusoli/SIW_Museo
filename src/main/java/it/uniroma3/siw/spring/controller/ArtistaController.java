@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import it.uniroma3.siw.spring.controller.validator.ArtistaValidator;
 import it.uniroma3.siw.spring.model.Artista;
-import it.uniroma3.siw.spring.model.Opera;
 import it.uniroma3.siw.spring.service.ArtistaService;
 
 @Controller
