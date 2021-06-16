@@ -13,6 +13,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 //import org.springframework.mock.web.MockMultipartFile;
@@ -38,7 +39,12 @@ public class Opera {
 	@ManyToOne
 	private Artista artista;
 	
+<<<<<<< Updated upstream
 	@OneToMany
+=======
+	
+	@ManyToMany(mappedBy = "opere")
+>>>>>>> Stashed changes
 	private List<Collezione> collezioni;
 	
 	//private String linkFoto; -->getter e setter
