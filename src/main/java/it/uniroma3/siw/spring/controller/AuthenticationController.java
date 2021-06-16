@@ -15,12 +15,16 @@ import it.uniroma3.siw.spring.controller.validator.UserValidator;
 import it.uniroma3.siw.spring.model.Credentials;
 import it.uniroma3.siw.spring.model.User;
 import it.uniroma3.siw.spring.service.CredentialsService;
+import it.uniroma3.siw.spring.service.UserService;
 
 @Controller
 public class AuthenticationController {
 	
 	@Autowired
 	private CredentialsService credentialsService;
+	
+	@Autowired
+	private UserService userService;
 	
 	@Autowired
 	private UserValidator userValidator;
@@ -71,11 +75,13 @@ public class AuthenticationController {
         
             // set the user and store the credentials;
             // this also stores the User, thanks to Cascade.ALL policy
-        
-            
+        if(!userBindingResult.hasErrors() && ! credentialsBindingResult.hasErrors()) {
+            userService.saveUser(user);
             credentials.setUser(user);
             credentialsService.saveCredentials(credentials);
             return "registrationSuccessful";
+        }
+		return "registerUser.html";
         
         
     }
