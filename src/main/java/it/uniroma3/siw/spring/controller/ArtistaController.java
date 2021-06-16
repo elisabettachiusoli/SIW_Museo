@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import it.uniroma3.siw.spring.controller.validator.ArtistaValidator;
 import it.uniroma3.siw.spring.model.Artista;
+import it.uniroma3.siw.spring.model.Opera;
 import it.uniroma3.siw.spring.service.ArtistaService;
 
 @Controller
@@ -49,6 +50,14 @@ public class ArtistaController {
 		model.addAttribute("artista", this.artistaService.tutti());
 		model.addAttribute("opere", artista.getOpere());
 
+		return "artisti";
+	}
+	
+	@RequestMapping(value="/admin/eliminaArtista/{id}", method=RequestMethod.POST)
+	public String eliminaArtista(Model model, @PathVariable("id") Long idArtista) {
+		Artista artista = artistaService.artistaPerId(idArtista);
+		artistaService.eliminaArtista(artista);
+		model.addAttribute("artista", this.artistaService.tutti());
 		return "artisti";
 	}
 }

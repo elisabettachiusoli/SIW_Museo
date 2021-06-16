@@ -59,7 +59,7 @@
     
     <div th:unless="${collezione}">Non esiste questa collezione</div>
     <form th:action="@{'/admin/eliminaCollezione' + '/' + ${id}}" method="POST">
-		<button type="submit" th:text="#{elimina.collezione}"></button>
+		<span><button type="submit" class="pulsante">Elimina Collezione</button></span>
 	</form>
    
    <footer th:replace="fragments/base.html :: fondo"></footer>

@@ -64,6 +64,9 @@
     </section>
 </div>
     	<div th:unless="${artista}" th:style="'color:white'">Questo artista non esiste</div>
+    	<form th:action="@{'/admin/eliminaArtista' + '/' + ${id}}" method="POST">
+			<span><button type="submit" class="pulsante">Elimina Artista</button></span>
+		</form>
     </div>
    <footer th:replace="fragments/base.html :: fondo"></footer>
 

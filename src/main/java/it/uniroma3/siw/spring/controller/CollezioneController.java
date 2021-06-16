@@ -69,7 +69,7 @@ public class CollezioneController {
 	public String eliminaCollezione(Model model, @PathVariable("id") Long idCollezione) {
 		Collezione collezione = collezioneService.collezionePerId(idCollezione);
 		collezioneService.eliminaCollezione(collezione);
-		model.addAttribute("collezione", this.operaService.tutti());
-		return "opere";
+		model.addAttribute("collezione", this.collezioneService.tutti());
+		return "collezioni";
 	}
 }

@@ -40,8 +40,8 @@
 	</div>
 	
 	<div th:unless="${opera}">Non esiste questa opera</div>
-	<form th:action="@{'/admin/eliminaOpera' + '/' + ${opera.id}}" method="POST">
-		<button type="submit" th:text="#{elimina.opera}"></button>
+	<form th:action="@{'/admin/eliminaOpera' + '/' + ${id}}" method="POST">
+		<span><button type="submit" class="pulsante">Elimina Opera</button></span>
 	</form>
 	<footer th:replace="fragments/base.html :: fondo"></footer>
 </body>

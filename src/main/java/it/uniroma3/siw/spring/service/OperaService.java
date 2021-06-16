@@ -62,15 +62,6 @@ public class OperaService {
 	}
 	
 	@Transactional
-	public List<Opera> filtraLista(List<Opera> lista) {
-		List<Opera> opere=this.tutti();
-		for(Opera o:lista) {
-			opere.remove(o);
-		}
-		return opere;
-	}
-	
-	@Transactional
 	public void eliminaOpera(Opera opera) {
 		operaRepository.delete(opera);
 	}

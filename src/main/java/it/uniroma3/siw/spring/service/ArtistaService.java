@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import it.uniroma3.siw.spring.model.Artista;
+import it.uniroma3.siw.spring.model.Opera;
 import it.uniroma3.siw.spring.repository.ArtistaRepository;
 
 @Service
@@ -48,5 +49,10 @@ public class ArtistaService {
 	public List<Artista> artistaPerNome(String nome) {
 		List<Artista> artista = this.artistaRepository.findByNome(nome);
 		return artista;
+	}
+
+	@Transactional
+	public void eliminaArtista(Artista artista) {
+		artistaRepository.delete(artista);
 	}
 }
