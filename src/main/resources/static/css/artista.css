@@ -66,4 +66,7 @@ padding-left:100px;
     text-align: center;
     color: darkred;
 }
+#opera ul {
+	list-style-type: none;
+}
 
